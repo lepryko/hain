@@ -11,8 +11,6 @@
  * 	- Eliminate Legend
  * 	- Legend Icons, Hover-Title
  * 	- Type Aliases - in single panel??
- * 	- Indexer.set (multiple entries) - shows both signatures then both parameters together.
- * 		- Should be signature #1, Parameters, Signature #2, Parameters
  */
 
 

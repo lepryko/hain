@@ -864,6 +864,11 @@ input[type=checkbox]:checked + .tsd-widget:before { background-position: -160px 
 
 img { max-width: 100%; }
 
+/* Customizations */
+
+.tsd-signatures { background-color: #fdfdfd; }
+.tsd-descriptions { margin-bottom: 30px; }
+
 .htsd-parameters {
 	display: grid;
 	grid-template-columns: auto auto 1fr;
@@ -879,3 +884,4 @@ img { max-width: 100%; }
 .htsd-parameters .htsd-subtype { margin-top: 10px; grid-column: 2 / span 2; }
 .htsd-parameters .tsd-comment.tsd-typography > p { display: inline-block; margin: 0px;}
 /*ol > ul.tsd-parameters .tsd-comment > p { display: inline; }*/
+
