@@ -49,10 +49,13 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">hain</a>
+					<a href="../globals.html">hain</a>
 				</li>
 				<li>
-					<a href="hain.indexedresult.html">IndexedResult</a>
+					<a href="../modules/hain.plugin.html">Plugin</a>
+				</li>
+				<li>
+					<a href="hain.plugin.indexedresult.html">IndexedResult</a>
 				</li>
 			</ul>
 			<h1>Interface IndexedResult</h1>
@@ -61,283 +64,195 @@
 </header>
 <div class="container container-main">
 	<div class="row">
-		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>IndexedResult is used as a return value for Indexer</p>
-					</div>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="tsd-signature-type">BaseResult</span>
-						<ul class="tsd-hierarchy">
-							<li>
-								<span class="target">IndexedResult</span>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Properties</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#group" class="tsd-kind-icon">group</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#icon" class="tsd-kind-icon">icon</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#id" class="tsd-kind-icon">id</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#payload" class="tsd-kind-icon">payload</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#preview" class="tsd-kind-icon">preview</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="hain.indexedresult.html#primarytext" class="tsd-kind-icon">primary<wbr>Text</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface tsd-is-inherited"><a href="hain.indexedresult.html#redirect" class="tsd-kind-icon">redirect</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="hain.indexedresult.html#secondarytext" class="tsd-kind-icon">secondary<wbr>Text</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Properties</h2>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="group" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> group</h3>
-					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.group</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:432</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Result grouping name, default is <code>group</code> of
-							<a href="http://appetizermonster.github.io/hain/docs/preferences-json-format/">package.json</a></p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="icon" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> icon</h3>
-					<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.icon</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:421</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Icon URL, default is <code>icon</code> of <a href="http://appetizermonster.github.io/hain/docs/preferences-json-format/">package.json</a>.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="http://appetizermonster.github.io/hain/docs/icon-url-format/">Icon URL Format</a></p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="id" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> id</h3>
-					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.id</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:410</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>An identifier (recommended tobe unique), used as argument to execute(), default is <code>undefined</code></p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="payload" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> payload</h3>
-					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.payload</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:415</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Extra information, used as second argument to execute(), default is <code>undefined</code></p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="preview" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> preview</h3>
-					<div class="tsd-signature tsd-kind-icon">preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.preview</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:437</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Whether it has HTML Preview, default is false; used with render().</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="primarytext" class="tsd-anchor"></a>
-					<h3>primary<wbr>Text</h3>
-					<div class="tsd-signature tsd-kind-icon">primary<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in hain-plugin.d.ts:501</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Title text for item.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="http://appetizermonster.github.io/hain/docs/text-format/">Text Format</a></p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-					<a name="redirect" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagOptional">Optional</span> redirect</h3>
-					<div class="tsd-signature tsd-kind-icon">redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<p>Inherited from BaseResult.redirect</p>
-						<ul>
-							<li>Defined in hain-plugin.d.ts:426</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Redirection query, default is undefined</p>
-						</div>
-					</div>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="secondarytext" class="tsd-anchor"></a>
-					<h3>secondary<wbr>Text</h3>
-					<div class="tsd-signature tsd-kind-icon">secondary<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-					<aside class="tsd-sources">
-						<ul>
-							<li>Defined in hain-plugin.d.ts:508</li>
-						</ul>
-					</aside>
-					<div class="tsd-comment tsd-typography">
-						<div class="lead">
-							<p>Description text for item.</p>
-						</div>
-						<dl class="tsd-comment-tags">
-							<dt>see</dt>
-							<dd><p><a href="http://appetizermonster.github.io/hain/docs/text-format/">Text Format</a></p>
-							</dd>
-						</dl>
-					</div>
-				</section>
-			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="current tsd-kind-module">
-						<a href="../index.html">hain</a>
+					<li class=" tsd-kind-module">
+						<a href="../globals.html">hain</a>
+					</li>
+					<li class="current tsd-kind-module tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html">hain.<wbr>Plugin</a>
+					</li>
+					<li class=" tsd-kind-module tsd-parent-kind-module">
+						<a href="../modules/hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/hain.keybitfield.html" class="tsd-kind-icon">Key<wbr>Bitfield</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/hain.plugin.html" class="tsd-kind-icon">Plugin</a>
+						<a href="../enums/hain.plugin.keybitfield.html" class="tsd-kind-icon">Key<wbr>Bitfield</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.app.html" class="tsd-kind-icon">App</a>
+						<a href="hain.plugin.executedata.html" class="tsd-kind-icon">Execute<wbr>Data</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.clipboard.html" class="tsd-kind-icon">Clipboard</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.executedata.html" class="tsd-kind-icon">Execute<wbr>Data</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.executekeydata.html" class="tsd-kind-icon">Execute<wbr>Key<wbr>Data</a>
+						<a href="hain.plugin.executekeydata.html" class="tsd-kind-icon">Execute<wbr>Key<wbr>Data</a>
 					</li>
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.indexedresult.html" class="tsd-kind-icon">Indexed<wbr>Result</a>
+						<a href="hain.plugin.indexedresult.html" class="tsd-kind-icon">Indexed<wbr>Result</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#group" class="tsd-kind-icon">group</a>
+								<a href="hain.plugin.indexedresult.html#group" class="tsd-kind-icon">group</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#icon" class="tsd-kind-icon">icon</a>
+								<a href="hain.plugin.indexedresult.html#icon" class="tsd-kind-icon">icon</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#id" class="tsd-kind-icon">id</a>
+								<a href="hain.plugin.indexedresult.html#id" class="tsd-kind-icon">id</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#payload" class="tsd-kind-icon">payload</a>
+								<a href="hain.plugin.indexedresult.html#payload" class="tsd-kind-icon">payload</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#preview" class="tsd-kind-icon">preview</a>
+								<a href="hain.plugin.indexedresult.html#preview" class="tsd-kind-icon">preview</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="hain.indexedresult.html#primarytext" class="tsd-kind-icon">primary<wbr>Text</a>
+								<a href="hain.plugin.indexedresult.html#primarytext" class="tsd-kind-icon">primary<wbr>Text</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
-								<a href="hain.indexedresult.html#redirect" class="tsd-kind-icon">redirect</a>
+								<a href="hain.plugin.indexedresult.html#redirect" class="tsd-kind-icon">redirect</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="hain.indexedresult.html#secondarytext" class="tsd-kind-icon">secondary<wbr>Text</a>
+								<a href="hain.plugin.indexedresult.html#secondarytext" class="tsd-kind-icon">secondary<wbr>Text</a>
 							</li>
 						</ul>
 					</li>
 				</ul>
 				<ul class="after-current">
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.indexer.html" class="tsd-kind-icon">Indexer</a>
+						<a href="hain.plugin.responseobject.html" class="tsd-kind-icon">Response<wbr>Object</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.logger.html" class="tsd-kind-icon">Logger</a>
+						<a href="hain.plugin.searchresult.html" class="tsd-kind-icon">Search<wbr>Result</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.plugincontext.html" class="tsd-kind-icon">Plugin<wbr>Context</a>
+					<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html#result" class="tsd-kind-icon">Result</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.pluginlocalstorage.html" class="tsd-kind-icon">Plugin<wbr>Local<wbr>Storage</a>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html#execute" class="tsd-kind-icon">execute</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.preferences.html" class="tsd-kind-icon">Preferences</a>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html#renderpreview" class="tsd-kind-icon">render<wbr>Preview</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.responseobject.html" class="tsd-kind-icon">Response<wbr>Object</a>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html#search" class="tsd-kind-icon">search</a>
 					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.searchresult.html" class="tsd-kind-icon">Search<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.shell.html" class="tsd-kind-icon">Shell</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.toaster.html" class="tsd-kind-icon">Toaster</a>
+					<li class=" tsd-kind-method tsd-parent-kind-module">
+						<a href="../modules/hain.plugin.html#startup" class="tsd-kind-icon">startup</a>
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-9 col-content">
+			<section class="tsd-panel tsd-comment">
+				<span class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>IndexedResult is used as a return value for Indexer</p>
+					</div>
+				</span>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="group" class="tsd-anchor"></a>
+					<h3>group<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Result grouping name, default is <code>group</code> of
+							<a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a></p>
+						</div>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="icon" class="tsd-anchor"></a>
+					<h3>icon<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Icon URL, default is <code>icon</code> of <a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a>.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt class="htsd-tag-see">see</dt>
+							<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/icon-url-format/">Icon URL Format</a></p>
+							</dd>
+						</dl>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>An identifier (recommended to be unique), used as argument to execute(), default is <code>undefined</code></p>
+						</div>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="payload" class="tsd-anchor"></a>
+					<h3>payload<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Extra information, used as second argument to execute(), default is <code>undefined</code></p>
+						</div>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="preview" class="tsd-anchor"></a>
+					<h3>preview<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Whether it has HTML Preview, default is false; used with render().</p>
+						</div>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="primarytext" class="tsd-anchor"></a>
+					<h3>primary<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">primary<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Title text for item.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt class="htsd-tag-see">see</dt>
+							<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a></p>
+							</dd>
+						</dl>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<a name="redirect" class="tsd-anchor"></a>
+					<h3>redirect<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
+					<div class="tsd-signature tsd-kind-icon">redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Redirection query, default is undefined</p>
+						</div>
+					</span>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="secondarytext" class="tsd-anchor"></a>
+					<h3>secondary<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">secondary<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<span class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Description text for item.</p>
+						</div>
+						<dl class="tsd-comment-tags">
+							<dt class="htsd-tag-see">see</dt>
+							<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a></p>
+							</dd>
+						</dl>
+					</span>
+				</section>
+			</section>
 		</div>
 	</div>
 </div>
@@ -405,6 +320,6 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+<script>if(location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

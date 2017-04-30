@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ResponseObject | hain Documentation</title>
+	<title>PluginContext | hain Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -49,203 +49,73 @@
 		<div class="container">
 			<ul class="tsd-breadcrumb">
 				<li>
-					<a href="../index.html">hain</a>
+					<a href="../globals.html">hain</a>
 				</li>
 				<li>
-					<a href="hain.responseobject.html">ResponseObject</a>
+					<a href="hain.plugincontext.html">PluginContext</a>
 				</li>
 			</ul>
-			<h1>Interface ResponseObject</h1>
+			<h1>Module PluginContext</h1>
 		</div>
 	</div>
 </header>
 <div class="container container-main">
 	<div class="row">
-		<div class="col-8 col-content">
-			<section class="tsd-panel tsd-comment">
-				<div class="tsd-comment tsd-typography">
-					<div class="lead">
-						<p>You can use this interface for adding or removing {SearchResult} entries.  This interface
-						is always provided as the second argument to Plugin.search().</p>
-					</div>
-					<dl class="tsd-comment-tags">
-						<dt>since</dt>
-						<dd><p>v0.5</p>
-						</dd>
-						<dt>example</dt>
-						<dd><pre>
- function search(query, res) {
-        res.add({
-            id: 'temp',
-            title: 'Fetching...',
-            desc: 'Please wait a second'
-        });
-        setTimeout(() => res.remove('temp'), 1000);
-    }
-</pre>
-						</dd>
-					</dl>
-				</div>
-			</section>
-			<section class="tsd-panel tsd-hierarchy">
-				<h3>Hierarchy</h3>
-				<ul class="tsd-hierarchy">
-					<li>
-						<span class="target">ResponseObject</span>
-					</li>
-				</ul>
-			</section>
-			<section class="tsd-panel-group tsd-index-group">
-				<h2>Index</h2>
-				<section class="tsd-panel tsd-index-panel">
-					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
-							<h3>Methods</h3>
-							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hain.responseobject.html#add" class="tsd-kind-icon">add</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-interface"><a href="hain.responseobject.html#remove" class="tsd-kind-icon">remove</a></li>
-							</ul>
-						</section>
-					</div>
-				</section>
-			</section>
-			<section class="tsd-panel-group tsd-member-group ">
-				<h2>Methods</h2>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="add" class="tsd-anchor"></a>
-					<h3>add</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="hain.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in hain-plugin.d.ts:483</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>Add a {SearchResult} to the result-set</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>result: <a href="hain.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol">[]</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<p>The result to be added to the list of searchable values</p>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-					<a name="remove" class="tsd-anchor"></a>
-					<h3>remove</h3>
-					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in hain-plugin.d.ts:489</li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>You can remove a {SearchResult} from the result-set that you previously added</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>id: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
-						</li>
-					</ul>
-				</section>
-			</section>
-		</div>
-		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
 			<nav class="tsd-navigation primary">
 				<ul>
-					<li class="current tsd-kind-module">
-						<a href="../index.html">hain</a>
+					<li class=" tsd-kind-module">
+						<a href="../globals.html">hain</a>
+					</li>
+					<li class=" tsd-kind-module tsd-parent-kind-module">
+						<a href="hain.plugin.html">hain.<wbr>Plugin</a>
+					</li>
+					<li class="current tsd-kind-module tsd-parent-kind-module">
+						<a href="hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
 					</li>
 				</ul>
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-enum tsd-parent-kind-module">
-						<a href="../enums/hain.keybitfield.html" class="tsd-kind-icon">Key<wbr>Bitfield</a>
-					</li>
-					<li class=" tsd-kind-class tsd-parent-kind-module">
-						<a href="../classes/hain.plugin.html" class="tsd-kind-icon">Plugin</a>
+					<li class=" tsd-kind-interface tsd-parent-kind-module">
+						<a href="../interfaces/hain.plugincontext.app.html" class="tsd-kind-icon">App</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.app.html" class="tsd-kind-icon">App</a>
+						<a href="../interfaces/hain.plugincontext.clipboard.html" class="tsd-kind-icon">Clipboard</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.clipboard.html" class="tsd-kind-icon">Clipboard</a>
+						<a href="../interfaces/hain.plugincontext.indexer.html" class="tsd-kind-icon">Indexer</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.executedata.html" class="tsd-kind-icon">Execute<wbr>Data</a>
+						<a href="../interfaces/hain.plugincontext.logger.html" class="tsd-kind-icon">Logger</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.executekeydata.html" class="tsd-kind-icon">Execute<wbr>Key<wbr>Data</a>
+						<a href="../interfaces/hain.plugincontext.plugincontext.html" class="tsd-kind-icon">Plugin<wbr>Context</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.indexedresult.html" class="tsd-kind-icon">Indexed<wbr>Result</a>
+						<a href="../interfaces/hain.plugincontext.pluginlocalstorage.html" class="tsd-kind-icon">Plugin<wbr>Local<wbr>Storage</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.indexer.html" class="tsd-kind-icon">Indexer</a>
+						<a href="../interfaces/hain.plugincontext.preferences.html" class="tsd-kind-icon">Preferences</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.logger.html" class="tsd-kind-icon">Logger</a>
+						<a href="../interfaces/hain.plugincontext.shell.html" class="tsd-kind-icon">Shell</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.plugincontext.html" class="tsd-kind-icon">Plugin<wbr>Context</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.pluginlocalstorage.html" class="tsd-kind-icon">Plugin<wbr>Local<wbr>Storage</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.preferences.html" class="tsd-kind-icon">Preferences</a>
-					</li>
-				</ul>
-				<ul class="current">
-					<li class="current tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.responseobject.html" class="tsd-kind-icon">Response<wbr>Object</a>
-						<ul>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="hain.responseobject.html#add" class="tsd-kind-icon">add</a>
-							</li>
-							<li class=" tsd-kind-method tsd-parent-kind-interface">
-								<a href="hain.responseobject.html#remove" class="tsd-kind-icon">remove</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-				<ul class="after-current">
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.searchresult.html" class="tsd-kind-icon">Search<wbr>Result</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.shell.html" class="tsd-kind-icon">Shell</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-parent-kind-module">
-						<a href="hain.toaster.html" class="tsd-kind-icon">Toaster</a>
+						<a href="../interfaces/hain.plugincontext.toaster.html" class="tsd-kind-icon">Toaster</a>
 					</li>
 				</ul>
 			</nav>
+		</div>
+		<div class="col-9 col-content">
+			<section class="tsd-panel tsd-comment">
+				<span class="tsd-comment tsd-typography">
+					<div class="lead">
+						<h2 id="markdown">Markdown</h2>
+						<p>This is rendered as markdown</p>
+					</div>
+				</span>
+			</section>
 		</div>
 	</div>
 </div>
@@ -313,6 +183,6 @@
 </div>
 <div class="overlay"></div>
 <script src="../assets/js/main.js"></script>
-<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+<script>if(location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
 </body>
 </html>

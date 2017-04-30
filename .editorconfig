@@ -12,6 +12,6 @@ insert_final_newline = false
 [*.md]
 trim_trailing_whitespace = false
 
-[*.hbs]
+[*.hbs;*.css]
 indent_style = tab
 indent_size = 4
