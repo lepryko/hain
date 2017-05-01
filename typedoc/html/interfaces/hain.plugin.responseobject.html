@@ -68,13 +68,13 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" tsd-kind-module">
-						<a href="../globals.html">hain</a>
+						<a class="tsd-kind-icon" href="../globals.html">hain</a>
 					</li>
 					<li class="current tsd-kind-module tsd-parent-kind-module">
-						<a href="../modules/hain.plugin.html">hain.<wbr>Plugin</a>
+						<a class="tsd-kind-icon" href="../modules/hain.plugin.html">hain.<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module">
-						<a href="../modules/hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
+						<a class="tsd-kind-icon" href="../modules/hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
 					</li>
 				</ul>
 			</nav>
@@ -135,23 +135,21 @@
 						<p>You can use this interface for adding or removing <a href="../modules/hain.plugin.html#result">Result</a> entries.  This interface
 						is always provided as the second argument to Plugin.search().</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt class="htsd-tag-since">since</dt>
-						<dd class="htsd-tag-since-comment"><p>v0.5</p>
-						</dd>
-						<dt class="htsd-tag-example">example</dt>
-						<dd class="htsd-tag-example-comment"><pre>
- function search(query, res) {
-        res.add({
-            id: 'temp',
-            title: 'Fetching...',
-            desc: 'Please wait a second'
-        });
-        setTimeout(() => res.remove('temp'), 1000);
-    }
-</pre>
-						</dd>
-					</dl>
+					<h3 id="example">Example</h3>
+					<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{
+     <span class="hljs-comment">// Add an entry to the result set</span>
+     res.add({
+         <span class="hljs-attr">id</span>:    <span class="hljs-string">'temp'</span>,
+         <span class="hljs-attr">title</span>: <span class="hljs-string">'Fetching...'</span>,
+         <span class="hljs-attr">desc</span>:  <span class="hljs-string">'Please wait a second'</span>,
+     });
+
+     <span class="hljs-comment">// Remove entry 'temp' after `1000ms`</span>
+     setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>
+         res.remove(<span class="hljs-string">'temp'</span>),
+     <span class="hljs-number">1000</span>);
+}
+</code></pre>
 				</span>
 			</section>
 			<section class="tsd-panel-group tsd-member-group ">

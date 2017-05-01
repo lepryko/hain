@@ -65,13 +65,13 @@
 			<nav class="tsd-navigation primary">
 				<ul>
 					<li class=" tsd-kind-module">
-						<a href="../globals.html">hain</a>
+						<a class="tsd-kind-icon" href="../globals.html">hain</a>
 					</li>
 					<li class="current tsd-kind-module tsd-parent-kind-module">
-						<a href="hain.plugin.html">hain.<wbr>Plugin</a>
+						<a class="tsd-kind-icon" href="hain.plugin.html">hain.<wbr>Plugin</a>
 					</li>
 					<li class=" tsd-kind-module tsd-parent-kind-module">
-						<a href="hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
+						<a class="tsd-kind-icon" href="hain.plugincontext.html">hain.<wbr>Plugin<wbr>Context</a>
 					</li>
 				</ul>
 			</nav>
@@ -271,11 +271,12 @@
 						<li class="tsd-description">
 							<span class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>This function will be invoked when user changed input text. <code>search()</code> will be called once per <code>30ms</code> maximum</p>
+									<p>This function will be invoked when user changes their query. This will be called every <code>30ms</code> maximum.</p>
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt class="htsd-tag-since">since</dt>
-									<dd class="htsd-tag-since-comment"><p>v0.6    search() is now only called when the query begins with your package.json prefix value</p>
+									<dd class="htsd-tag-since-comment"><p>v0.6   <code>search()</code> is only called when the query begins with your
+										<a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a> prefix value</p>
 									</dd>
 								</dl>
 							</span>
@@ -289,7 +290,7 @@
 								</span>
 								<span class="htsd-comment">
 									<span class="tsd-comment tsd-typography">
-										<p>The query the user has entered so far</p>
+										<p>The query the user has input so far</p>
 									</span>
 								</span>
 								<span class="htsd-name">
@@ -317,7 +318,7 @@
 						<li class="tsd-description">
 							<span class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p> This function will be invoked on startup once. you can do any preparations here.</p>
+									<p> This function will be invoked once at startup.  Use promises and asynchronous calls to avoid long load times.</p>
 								</div>
 							</span>
 						</li>

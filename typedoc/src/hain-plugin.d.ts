@@ -94,17 +94,18 @@ export declare namespace hain {
 	export interface Plugin {
 
 		/**
-		 *  This function will be invoked on startup once. you can do any preparations here.
+		 *  This function will be invoked once at startup.  Use promises and asynchronous calls to avoid long load times.
 		 */
 		startup?(): void;
 
 		/**
-		 * This function will be invoked when user changed input text. `search()` will be called once per `30ms` maximum
+		 * This function will be invoked when user changes their query. This will be called every `30ms` maximum.
 		 *
-		 * @param query    The query the user has entered so far
+		 * @param query  The query the user has input so far
 		 * @param res    The results of the query should be added to this object
 		 *
-		 * @since v0.6    search() is now only called when the query begins with your package.json prefix value
+		 * @since v0.6   `search()` is only called when the query begins with your
+		 * 					[package.json](http://hainproject.github.io/hain/docs/preferences-json-format/) prefix value
 		 */
 		search(query: string, res: Plugin.ResponseObject): void;
 
@@ -122,7 +123,7 @@ export declare namespace hain {
 		 *
 		 * @param id         id of the selected [[SearchResult]] or [[IndexedResult]]
 		 * @param payload    payload of the selected [[SearchResult]] or [[IndexedResult]]
-		 * @param render   Call this function with html to be rendered in the preview area
+		 * @param render     Call this function with html to be rendered in the preview area
 		 */
 		renderPreview?(id: any, payload: any, render: (html: string) => void): void;
 	}
@@ -134,19 +135,22 @@ export declare namespace hain {
 		 * You can use this interface for adding or removing [[Result]] entries.  This interface
 		 *  is always provided as the second argument to Plugin.search().
 		 *
-		 * @since v0.5
+		 * ### Example
+		 * ```
+		 * function search(query, res) {
+		 *	 // Add an entry to the result set
+		 *	 res.add({
+		 *	 	id:    'temp',
+		 *	 	title: 'Fetching...',
+		 *	 	desc:  'Please wait a second',
+		 *	 });
 		 *
-		 * @example
-		 * <pre>
-		 *  function search(query, res) {
-		 *	    res.add({
-		 *	        id: 'temp',
-		 *	        title: 'Fetching...',
-		 *	        desc: 'Please wait a second'
-		 *	    });
-		 *	    setTimeout(() => res.remove('temp'), 1000);
-		 *	}
-		 * </pre>
+		 *	 // Remove entry 'temp' after `1000ms`
+		 *	 setTimeout(() =>
+		 *	 	res.remove('temp'),
+		 *	 1000);
+		 * }
+		 * ```
 		 */
 		export interface ResponseObject {
 			/**
@@ -262,7 +266,7 @@ export declare namespace hain {
 		}
 
 		/**
-		 * IndexedResult is used as a return value for Indexer
+		 * IndexedResult is used as a return value for [[Indexer]]
 		 */
 		export interface IndexedResult extends BaseResult {
 			/**
