@@ -3,6 +3,7 @@
 /** Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 
+header { background: white; }
 /** Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
 audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 
@@ -189,7 +190,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 @media (max-width: 640px) { .container { padding: 0 20px; } }
 
-.container-main { padding-bottom: 200px; }
+.container-main { padding-bottom: 25px; }
 
 .row { position: relative; margin: 0 -10px; }
 .row:after { visibility: hidden; display: block; content: ""; clear: both; height: 0; }
@@ -629,8 +630,8 @@ pre code { padding: 0; font-size: 100%; background-color: transparent; }
   html.default.has-menu header, html.default.has-menu footer, html.default.has-menu .col-content { -webkit-transform: translate(-25%, 0); transform: translate(-25%, 0); }
   html.default.has-menu .col-menu { visibility: visible; -webkit-transform: translate(0, 0); transform: translate(0, 0); } }
 
-.tsd-page-title { padding: 70px 0 20px 0; margin: 0 0 40px 0; background: #fff; box-shadow: 0 0 5px rgba(0, 0, 0, 0.35); }
-.tsd-page-title h1 { margin: 0; }
+.tsd-page-title { padding: 20px 0 20px 0; margin: 0 0 20px 0; box-shadow: 0 0 5px rgba(0, 0, 0, 0.35); }
+.tsd-page-title h1 { margin: 0; font-size:  1.5em; }
 
 .tsd-breadcrumb { margin: 0; padding: 0; color: #808080; }
 .tsd-breadcrumb a { color: #808080; text-decoration: none; }
@@ -679,7 +680,7 @@ dl.tsd-comment-tags p { margin: 0; }
   .from-has-options #tsd-filter .tsd-filter-group { -webkit-animation: fade-out 0.2s; animation: fade-out 0.2s; }
   #tsd-filter label, #tsd-filter .tsd-select { display: block; padding-right: 20px; } }
 
-footer { border-top: 1px solid #eee; background-color: #fff; }
+footer { margin-top: 30px; border-top: 1px solid #eee; background-color: #fff; }
 footer.with-border-bottom { border-bottom: 1px solid #eee; }
 footer .tsd-legend-group { font-size: 0; }
 footer .tsd-legend { display: inline-block; width: 25%; padding: 0; font-size: 16px; list-style: none; line-height: 1.333em; vertical-align: top; }
@@ -712,13 +713,13 @@ footer .tsd-legend { display: inline-block; width: 25%; padding: 0; font-size: 1
 .tsd-member { position: relative; }
 .tsd-member .tsd-anchor + h3 { margin-top: 0; margin-bottom: 0; border-bottom: none; }
 
-.tsd-navigation { padding: 0 0 0 40px; }
+.tsd-navigation { padding: 0 0 0 20px; }
 .tsd-navigation a { display: block; padding-top: 2px; padding-bottom: 2px; border-left: 2px solid transparent; color: #222; text-decoration: none; -webkit-transition: border-left-color 0.1s; transition: border-left-color 0.1s; }
 .tsd-navigation a:hover { text-decoration: underline; }
 .tsd-navigation ul { margin: 0; padding: 0; list-style: none; }
 .tsd-navigation li { padding: 0; }
 
-.tsd-navigation.primary { padding-bottom: 40px; }
+.tsd-navigation.primary { padding-bottom: 20px; }
 .tsd-navigation.primary a { display: block; padding-top: 6px; padding-bottom: 6px; }
 .tsd-navigation.primary ul li a { padding-left: 5px; }
 .tsd-navigation.primary ul li li a { padding-left: 25px; }
@@ -744,13 +745,17 @@ footer .tsd-legend { display: inline-block; width: 25%; padding: 0; font-size: 1
 .tsd-navigation.secondary li.current { margin-top: 20px; margin-bottom: 20px; border-left-color: #eee; }
 .tsd-navigation.secondary li.current > a { font-weight: bold; }
 
-@media (min-width: 901px) { .menu-sticky-wrap { position: static; }
-  .no-csspositionsticky .menu-sticky-wrap.sticky { position: fixed; }
-  .no-csspositionsticky .menu-sticky-wrap.sticky-current { position: fixed; }
-  .no-csspositionsticky .menu-sticky-wrap.sticky-current ul.before-current, .no-csspositionsticky .menu-sticky-wrap.sticky-current ul.after-current { opacity: 0; }
-  .no-csspositionsticky .menu-sticky-wrap.sticky-bottom { position: absolute; top: auto !important; left: auto !important; bottom: 0; right: 0; }
-  .csspositionsticky .menu-sticky-wrap.sticky { position: -webkit-sticky; position: sticky; }
-  .csspositionsticky .menu-sticky-wrap.sticky-current { position: -webkit-sticky; position: sticky; } }
+@media (min-width: 901px) {
+	.menu-sticky-wrap { position: static; }
+  	.no-csspositionsticky .menu-sticky-wrap.sticky { position: fixed; }
+  	.no-csspositionsticky .menu-sticky-wrap.sticky-current { position: fixed; }
+  	.no-csspositionsticky .menu-sticky-wrap.sticky-current ul.before-current,
+	.no-csspositionsticky .menu-sticky-wrap.sticky-current ul.after-current { opacity: 0; }
+  	.no-csspositionsticky .menu-sticky-wrap.sticky-bottom { position: absolute; top: auto !important; left: auto !important; bottom: 0; right: 0; }
+
+	.csspositionsticky .menu-sticky-wrap.sticky { position: -webkit-sticky; position: sticky; top: 60px;}
+  	.csspositionsticky .menu-sticky-wrap.sticky-current { position: -webkit-sticky; position: sticky; top: 60px;}
+}
 
 .tsd-panel { margin: 10px 0 20px 0; padding: 20px; background-color: #fff; box-shadow: 0 0 4px rgba(0, 0, 0, 0.25); }
 .tsd-panel:empty { display: none; }
@@ -824,7 +829,7 @@ ul.tsd-parameters .tsd-comment, ul.tsd-type-parameters .tsd-comment { margin-top
 .tsd-sources ul, .tsd-sources p { margin: 0 !important; }
 .tsd-sources ul { list-style: none; padding: 0; }
 
-.tsd-page-toolbar { position: absolute; z-index: 1; top: 0; left: 0; width: 100%; height: 40px; color: #333; background: #fff; border-bottom: 1px solid #eee; }
+.tsd-page-toolbar { height: 40px; color: #333; border-bottom: 1px solid #EEEEEE; }
 .tsd-page-toolbar a { color: #333; text-decoration: none; }
 .tsd-page-toolbar a.title { font-weight: bold; }
 .tsd-page-toolbar a.title:hover { text-decoration: underline; }
@@ -885,3 +890,7 @@ img { max-width: 100%; }
 .htsd-parameters .tsd-comment.tsd-typography > p { display: inline-block; margin: 0px;}
 /*ol > ul.tsd-parameters .tsd-comment > p { display: inline; }*/
 
+/*.htsd-toolbar-shadow { position: sticky; top: 40px; height: 0px; }*/
+/*.htsd-toolbar-shadow DIV { position: relative; top: -10px; height: 5px; z-index: 90; box-shadow: 0 0 5px rgba(0, 0, 0, 0.35); }*/
+.htsd-header-spacer { position: sticky; top: 40px; height: 20px; z-index: 90; background: #FDFDFD; margin: 10px;  box-shadow: 0 0 5px 5px #FDFDFD; }
+.clearfix { clear: both; height: 0px; padding: 0px; margin: 0px; }

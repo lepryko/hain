@@ -13,7 +13,7 @@ gulp.task('deps', () => {
 });
 
 gulp.task('clean', () => {
-	return del(['./html/**']);
+	return del(['./html/**','./html-default/**'])
 });
 
 gulp.task('typedoc', ['deps', 'clean'], () => {
@@ -41,11 +41,36 @@ gulp.task('typedoc', ['deps', 'clean'], () => {
 		}))
 });
 
-gulp.task('watch', ['typedoc'], () => {
+gulp.task('typedoc-default', ['deps', 'clean'], () => {
+	return gulp
+		.src(["./src/*.d.ts"])
+		.pipe(typedoc({
+			mode  : 'file',
+			target: 'ES2015',
+
+			out    : './html-default',
+			rootDir: './src',
+
+			// theme: 'default',
+			theme: 'default',
+			name : 'hain Documentation',
+
+			entryPoint: 'hain',
+
+			version            : true,
+			includeDeclarations: true,
+			excludeExternals   : true,
+			excludeNotExported : true,
+			hideSources        : true,
+			readme             : 'readme.md',
+		}))
+});
+
+gulp.task('watch', ['default'], () => {
 	const opts = {
 		debounceDelay: 2000
 	};
-	gulp.watch(['./theme/**', './src/**'], opts, ['typedoc']);
+	gulp.watch(['./theme/**', './src/**'], opts, ['default']);
 });
 
-gulp.task('default', ['typedoc']);
+gulp.task('default', ['typedoc', 'typedoc-default']);

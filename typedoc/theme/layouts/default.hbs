@@ -9,13 +9,12 @@
 
 	<link rel="stylesheet" href="{{relativeURL "assets/css/main.css"}}">
 </head>
-<body>
+<body class="csspositionsticky">
+	{{> header}}
 
-{{> header}}
-
-<div class="container container-main">
-	<div class="row">
-		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+	<div class="container container-main">
+	<!--<div class="row">-->
+		<div class="col-3 col-menu menu-sticky-wrap sticky menu-highlight">
 			{{!--
 			--}}
 			<nav class="tsd-navigation primary">
@@ -39,16 +38,16 @@
 		<div class="col-9 col-content">
 			{{{contents}}}
 		</div>
+	<!--</div>-->
+		<div class="clearfix"></div>
+		{{> footer}}
+
+		<div class="overlay"></div>
+		<script src="{{relativeURL "assets/js/main.js"}}"></script>
+		<script>if(location.protocol == 'file:') document.write('<script src="{{relativeURL "assets/js/search.js"}}"><' + '/script>');</script>
+
+		{{> analytics}}
+
 	</div>
-</div>
-
-{{> footer}}
-
-<div class="overlay"></div>
-<script src="{{relativeURL "assets/js/main.js"}}"></script>
-<script>if(location.protocol == 'file:') document.write('<script src="{{relativeURL "assets/js/search.js"}}"><' + '/script>');</script>
-
-{{> analytics}}
-
 </body>
 </html>
