@@ -4,13 +4,12 @@
 
 /***
  * Documenation Todo List:
- * 	- Upper left navigation, eliminate duplicate hain from hain.Plugin, hain.PluginContext
- * 	- Left navigation: fixed
- * 	- Tighten up header
- * 	- Top bar, stays at top
- * 	- Eliminate Legend
- * 	- Legend Icons, Hover-Title
  * 	- Type Aliases - in single panel??
+ * 	- Pop-over Type Aliases?
+ * 	- synchronize with existing documentation
+ * 	- Expand on documentation with examples, samples & links
+ * 	- Create/Upload official @types/hain-plugin
+ * 	- Have gulp file download from official source and build (... onchange?)
  */
 
 

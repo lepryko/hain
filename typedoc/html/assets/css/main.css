@@ -1,7 +1,7 @@
 /*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ========================================================================== HTML5 display definitions ========================================================================== */
 /** Correct `block` display not defined in IE 6/7/8/9 and Firefox 3. */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section { display: block; }
 
 header { background: white; }
 /** Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3. */
@@ -31,9 +31,9 @@ a:active, a:hover { outline: 0; }
 /** Improve readability when focused and also mouse hovered in all browsers. */
 /* ========================================================================== Typography ========================================================================== */
 /** Address font sizes and margins set differently in IE 6/7. Address font sizes within `section` and `article` in Firefox 4+, Safari 5, and Chrome. */
-h1 { font-size: 2em; margin: 0.67em 0; }
+h1 { font-size: 1.5em; margin: 0.67em 0; }
 
-h2 { font-size: 1.5em; margin: 0.83em 0; }
+h2 { font-size: 1.2em; margin: 0.83em 0; }
 
 h3 { font-size: 1.17em; margin: 1em 0; }
 
@@ -894,3 +894,6 @@ img { max-width: 100%; }
 /*.htsd-toolbar-shadow DIV { position: relative; top: -10px; height: 5px; z-index: 90; box-shadow: 0 0 5px rgba(0, 0, 0, 0.35); }*/
 .htsd-header-spacer { position: sticky; top: 40px; height: 20px; z-index: 90; background: #FDFDFD; margin: 10px;  box-shadow: 0 0 5px 5px #FDFDFD; }
 .clearfix { clear: both; height: 0px; padding: 0px; margin: 0px; }
+
+SUMMARY { cursor: pointer; }
+SUMMARY > H2 { display: inline-block; }
