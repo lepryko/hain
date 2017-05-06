@@ -22,6 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
+					<a href="../index.html"><img src="../assets/images/logo.png"></a>
 					<a href="../index.html" class="title">hain Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
@@ -29,7 +30,7 @@
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
 							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
+								<div class="tsd-select-label">All</div>
 								<ul class="tsd-select-list">
 									<li data-value="public">Public</li>
 									<li data-value="protected">Public/Protected</li>
@@ -127,29 +128,31 @@
 	</div>
 	<div class="col-9 col-content">
 		<section class="tsd-panel tsd-comment">
-			<span class="tsd-comment tsd-typography">
+			<div class="tsd-comment tsd-typography">
 				<dl class="tsd-comment-tags">
 					<dt class="htsd-tag-since">since</dt>
 					<dd class="htsd-tag-since-comment"><p>v0.6</p>
 					</dd>
 				</dl>
-			</span>
+			</div>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="remove" class="tsd-anchor"></a>
-				<h3>remove</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>remove<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Removes the set of results added with the given key</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -159,27 +162,27 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>A unique ID which you can later use to remove or modify this addition</p>
-								</span>
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="set" class="tsd-anchor"></a>
-				<h3>set</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>set<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, value<span class="tsd-signature-symbol">: </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Adds a set of results to the built-in indexer to be searchable, execute() is called with the id and payload provided.</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -189,9 +192,9 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>A unique ID which you can later use to remove or modify this addition</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								value:&nbsp;
@@ -202,23 +205,26 @@
 								<a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol">[]</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The entry or entries to be added</p>
-								</span>
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>set<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, callback<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Adds a synchronous callback function to the built-in indexer, should return dynamic values to be used with the indexer</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -228,9 +234,9 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>A unique ID which you can later use to remove or modify this addition</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								callback:&nbsp;
@@ -239,15 +245,18 @@
 								<span class="tsd-signature-type">function</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The callback function, this will be called synchronously</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-subtype">
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-siganture">
 										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol">[]</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span><span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol">[]</span></span>
+												<span>
+												</span>
+											</li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">

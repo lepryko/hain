@@ -22,6 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
+					<a href="../index.html"><img src="../assets/images/logo.png"></a>
 					<a href="../index.html" class="title">hain Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
@@ -29,7 +30,7 @@
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
 							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
+								<div class="tsd-select-label">All</div>
 								<ul class="tsd-select-list">
 									<li data-value="public">Public</li>
 									<li data-value="protected">Public/Protected</li>
@@ -136,7 +137,7 @@
 	</div>
 	<div class="col-9 col-content">
 		<section class="tsd-panel tsd-comment">
-			<span class="tsd-comment tsd-typography">
+			<div class="tsd-comment tsd-typography">
 				<dl class="tsd-comment-tags">
 					<dt class="htsd-tag-since">since</dt>
 					<dd class="htsd-tag-since-comment"><p>v0.5</p>
@@ -145,23 +146,25 @@
 					<dd class="htsd-tag-see-comment"><p><a href="http://electron.atom.io/docs/api/clipboard/">http://electron.atom.io/docs/api/clipboard/</a></p>
 					</dd>
 				</dl>
-			</span>
+			</div>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="clear" class="tsd-anchor"></a>
-				<h3>clear</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>clear<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Clear the clipboard of contents</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -171,27 +174,27 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The clipboard type to clear</p>
-								</span>
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="readhtml" class="tsd-anchor"></a>
-				<h3>readHTML</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">readHTML<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>readHTML<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Read the clipboard in HTML format</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -201,29 +204,29 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The clipboard type to read</p>
-								</span>
-								<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+									<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+								</div>
 							</span>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="readtext" class="tsd-anchor"></a>
-				<h3>read<wbr>Text</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">read<wbr>Text<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>read<wbr>Text<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Read the clipboard in text format</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -233,29 +236,29 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The clipboard type to read</p>
-								</span>
-								<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+									<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+								</div>
 							</span>
 						</div>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="writehtml" class="tsd-anchor"></a>
-				<h3>writeHTML</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">writeHTML<span class="tsd-signature-symbol">(</span>html<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>writeHTML<span class="tsd-signature-symbol">(</span>html<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Write to the clipboard in HTML format</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -265,9 +268,9 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The html content to place on the clipboard</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								type:&nbsp;
@@ -276,28 +279,28 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The clipboard type to clear</p>
-								</span>
-								<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+									<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
 				<a name="writetext" class="tsd-anchor"></a>
-				<h3>write<wbr>Text</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon">write<wbr>Text<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>write<wbr>Text<span class="tsd-signature-symbol">(</span>text<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, type<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>Write to the clipboard in text format</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -307,9 +310,9 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The content to place on the clipboard</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								type:&nbsp;
@@ -318,10 +321,10 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The clipboard type to write</p>
-								</span>
-								<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+									<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+								</div>
 							</span>
 						</div>
 					</li>

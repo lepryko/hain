@@ -22,6 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
+					<a href="../index.html"><img src="../assets/images/logo.png"></a>
 					<a href="../index.html" class="title">hain Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
@@ -29,7 +30,7 @@
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
 							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
+								<div class="tsd-select-label">All</div>
 								<ul class="tsd-select-list">
 									<li data-value="public">Public</li>
 									<li data-value="protected">Public/Protected</li>
@@ -151,21 +152,20 @@
 	</div>
 	<div class="col-9 col-content">
 		<section class="tsd-panel tsd-comment">
-			<span class="tsd-comment tsd-typography">
+			<div class="tsd-comment tsd-typography">
 				<dl class="tsd-comment-tags">
 					<dt class="htsd-tag-since">since</dt>
 					<dd class="htsd-tag-since-comment"><p>v0.5</p>
 					</dd>
 				</dl>
-			</span>
+			</div>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Properties</h2>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
 				<a name="desc" class="tsd-anchor"></a>
-				<h3>desc</h3>
 				<div class="tsd-signature tsd-kind-icon">desc<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Description text for item.</p>
 					</div>
@@ -174,79 +174,64 @@
 						<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a></p>
 						</dd>
 					</dl>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				</div>
 				<a name="group" class="tsd-anchor"></a>
-				<h3>group<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">group<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Result grouping name, default is <code>group</code> of
 						<a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a></p>
 					</div>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+				</div>
 				<a name="icon" class="tsd-anchor"></a>
-				<h3>icon<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">icon<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Icon URL, default is <code>icon</code> of <a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a>.</p>
 					</div>
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
 					<dl class="tsd-comment-tags">
 						<dt class="htsd-tag-see">see</dt>
 						<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/icon-url-format/">Icon URL Format</a></p>
 						</dd>
 					</dl>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+				</div>
 				<a name="id" class="tsd-anchor"></a>
-				<h3>id<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>An identifier (recommended to be unique), used as argument to execute(), default is <code>undefined</code></p>
 					</div>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+				</div>
 				<a name="payload" class="tsd-anchor"></a>
-				<h3>payload<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Extra information, used as second argument to execute(), default is <code>undefined</code></p>
 					</div>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+				</div>
 				<a name="preview" class="tsd-anchor"></a>
-				<h3>preview<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">preview<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Whether it has HTML Preview, default is false; used with render().</p>
 					</div>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface tsd-is-inherited">
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+				</div>
 				<a name="redirect" class="tsd-anchor"></a>
-				<h3>redirect<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<div class="tsd-signature tsd-kind-icon">redirect<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Redirection query, default is undefined</p>
 					</div>
-				</span>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<span class="tsd-flag ts-flagOptional">Optional</span>&nbsp;
+				</div>
 				<a name="title" class="tsd-anchor"></a>
-				<h3>title</h3>
 				<div class="tsd-signature tsd-kind-icon">title<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
-				<span class="tsd-comment tsd-typography">
+				<div class="tsd-comment tsd-typography">
 					<div class="lead">
 						<p>Title text for item.</p>
 					</div>
@@ -255,7 +240,7 @@
 						<dd class="htsd-tag-see-comment"><p><a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a></p>
 						</dd>
 					</dl>
-				</span>
+				</div>
 			</section>
 		</section>
 	</div>

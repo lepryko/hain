@@ -22,6 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
+					<a href="../index.html"><img src="../assets/images/logo.png"></a>
 					<a href="../index.html" class="title">hain Documentation</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
@@ -29,7 +30,7 @@
 						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
 						<div class="tsd-filter-group">
 							<div class="tsd-select" id="tsd-filter-visibility">
-								<span class="tsd-select-label">All</span>
+								<div class="tsd-select-label">All</div>
 								<ul class="tsd-select-list">
 									<li data-value="public">Public</li>
 									<li data-value="protected">Public/Protected</li>
@@ -118,19 +119,18 @@
 	</div>
 	<div class="col-9 col-content">
 		<section class="tsd-panel tsd-comment">
-			<span class="tsd-comment tsd-typography">
+			<div class="tsd-comment tsd-typography">
 				<div class="lead">
 					<p>These are the functions your plugin can/must implement</p>
 				</div>
 				<h2 id="markdown">Markdown</h2>
 				<p>This is rendered as markdown</p>
-			</span>
+			</div>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Type aliases</h2>
 			<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-parent-kind-module">
 				<a name="result" class="tsd-anchor"></a>
-				<h3>Result</h3>
 				<div class="tsd-signature tsd-kind-icon">Result<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugin.indexedresult.html" class="tsd-signature-type">IndexedResult</a><span class="tsd-signature-symbol"> | </span><a href="../interfaces/hain.plugin.searchresult.html" class="tsd-signature-type">SearchResult</a></div>
 			</section>
 		</section>
@@ -138,17 +138,20 @@
 			<h2>Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 				<a name="execute" class="tsd-anchor"></a>
-				<h3>execute<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
-					<li class="tsd-signature tsd-kind-icon">execute<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, extra<span class="tsd-signature-symbol">: </span><a href="../interfaces/hain.plugin.executedata.html" class="tsd-signature-type">ExecuteData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>execute<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, extra<span class="tsd-signature-symbol">: </span><a href="../interfaces/hain.plugin.executedata.html" class="tsd-signature-type">ExecuteData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+							<span class="tsd-flag ts-flagOptional">Optional</span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>This function will be invoked when user executes a <a href="hain.plugin.html#result">Result</a> you send in the search function.</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -158,9 +161,9 @@
 								<span class="tsd-signature-type">any</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p><code>id</code> of the selected <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a></p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								payload:&nbsp;
@@ -169,9 +172,9 @@
 								<span class="tsd-signature-type">any</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p><code>payload</code> of the selected <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a></p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								extra:&nbsp;
@@ -180,27 +183,28 @@
 								<a href="../interfaces/hain.plugin.executedata.html" class="tsd-signature-type">ExecuteData</a>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>Contains extra information passed from hain when the execute event ocurred</p>
-								</span>
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 				<a name="renderpreview" class="tsd-anchor"></a>
-				<h3>render<wbr>Preview<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
-					<li class="tsd-signature tsd-kind-icon">render<wbr>Preview<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, render<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>render<wbr>Preview<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, payload<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, render<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+							<span class="tsd-flag ts-flagOptional">Optional</span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>If present, is called when an <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a> is selected from the list</p>
 							</div>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -210,9 +214,9 @@
 								<span class="tsd-signature-type">any</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>id of the selected <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a></p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								payload:&nbsp;
@@ -221,9 +225,9 @@
 								<span class="tsd-signature-type">any</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>payload of the selected <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a></p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								render:&nbsp;
@@ -232,15 +236,18 @@
 								<span class="tsd-signature-type">function</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>Call this function with html to be rendered in the preview area</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-subtype">
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-siganture">
 										<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>html<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span><span class="tsd-signature-symbol">(</span>html<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+												<span>
+												</span>
+											</li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
@@ -263,16 +270,16 @@
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 				<a name="search" class="tsd-anchor"></a>
-				<h3>search</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
-					<li class="tsd-signature tsd-kind-icon">search<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, res<span class="tsd-signature-symbol">: </span><a href="../interfaces/hain.plugin.responseobject.html" class="tsd-signature-type">ResponseObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>search<span class="tsd-signature-symbol">(</span>query<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, res<span class="tsd-signature-symbol">: </span><a href="../interfaces/hain.plugin.responseobject.html" class="tsd-signature-type">ResponseObject</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p>This function will be invoked when user changes their query. This will be called every <code>30ms</code> maximum.</p>
 							</div>
@@ -282,7 +289,7 @@
 									<a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a> prefix value</p>
 								</dd>
 							</dl>
-						</span>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<div class="htsd-parameters">
 							<span class="htsd-name">
@@ -292,9 +299,9 @@
 								<span class="tsd-signature-type">string</span>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The query the user has input so far</p>
-								</span>
+								</div>
 							</span>
 							<span class="htsd-name">
 								res:&nbsp;
@@ -303,27 +310,28 @@
 								<a href="../interfaces/hain.plugin.responseobject.html" class="tsd-signature-type">ResponseObject</a>
 							</span>
 							<span class="htsd-comment">
-								<span class="tsd-comment tsd-typography">
+								<div class="tsd-comment tsd-typography">
 									<p>The results of the query should be added to this object</p>
-								</span>
+								</div>
 							</span>
 						</div>
 					</li>
 				</ul>
-			</section>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-module">
 				<a name="startup" class="tsd-anchor"></a>
-				<h3>startup<span class="tsd-flag ts-flagOptional">Optional</span> </h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-module">
-					<li class="tsd-signature tsd-kind-icon">startup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon"><span>startup<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
+						<span>
+							<span class="tsd-flag ts-flagOptional">Optional</span>
+						</span>
+					</li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
-						<span class="tsd-comment tsd-typography">
+						<div class="tsd-comment tsd-typography">
 							<div class="lead">
 								<p> This function will be invoked once at startup.  Use promises and asynchronous calls to avoid long load times.</p>
 							</div>
-						</span>
+						</div>
 					</li>
 				</ul>
 			</section>

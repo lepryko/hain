@@ -1,0 +1,20 @@
+{{! this == members.group as passed to members.group.hbs }}
+{{#ifCond title '!=' 'Type aliases'}}
+	{{! Everything but Type Aliases }}
+	{{#each children}}
+		{{#unless hasOwnDocument}}
+			<section class="tsd-panel tsd-member {{cssClasses}}">
+				{{> member}}
+			</section>
+		{{/unless}}
+	{{/each}}
+{{else}}
+	{{! Type Aliases - In one panel }}
+	<section class="tsd-panel tsd-member {{children.0.cssClasses}}">
+		{{#each children}}
+			{{#unless hasOwnDocument}}
+				{{> member NoHeader=1}}
+			{{/unless}}
+		{{/each}}
+	</section>
+{{/ifCond}}
