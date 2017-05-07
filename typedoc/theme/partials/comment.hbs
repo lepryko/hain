@@ -1,29 +1,29 @@
 {{#with comment}}
 	{{#if hasVisibleComponent}}
 		<div class="tsd-comment tsd-typography">
-            {{#if shortText}}
-                <div class="lead">
-                    {{#markdown}}{{{shortText}}}{{/markdown}}
-                </div>
-            {{/if}}
-            {{#if text}}
-                {{#markdown}}{{{text}}}{{/markdown}}
-            {{/if}}
+		{{#if shortText}}
+				<div class="lead">
+					{{#markdown}}{{{shortText}}}{{/markdown}}
+				</div>
 		{{/if}}
-	{{/with}}
-	{{#each flags}}
+		{{#if text}}
+			{{#markdown}}{{{text}}}{{/markdown}}
+		{{/if}}
+	{{/if}}
+{{/with}}
+{{#each flags}}
 		<span class="tsd-flag ts-flag{{this}}">{{this}}</span>&nbsp;
-	{{/each}}
-	{{#with comment}}
-		{{#if hasVisibleComponent}}
-			{{#if tags}}
-                <dl class="tsd-comment-tags">
-                    {{#each tags}}
-                        <dt class="htsd-tag-{{tagName}}">{{tagName}}</dt>
-                        <dd class="htsd-tag-{{tagName}}-comment">{{#markdown}}{{{text}}}{{/markdown}}</dd>
-                    {{/each}}
-                </dl>
-            {{/if}}
-        </div>
+{{/each}}
+{{#with comment}}
+	{{#if hasVisibleComponent}}
+		{{#if tags}}
+				<dl class="tsd-comment-tags">
+					{{#each tags}}
+						<dt class="htsd-tag-{{tagName}}">{{tagName}}</dt>
+						<dd class="htsd-tag-{{tagName}}-comment">{{#markdown}}{{{text}}}{{/markdown}}</dd>
+					{{/each}}
+				</dl>
+		{{/if}}
+		</div>
 	{{/if}}
 {{/with}}

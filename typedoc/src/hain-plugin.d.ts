@@ -2,17 +2,6 @@
 // Project: hainproject/hain
 // Definitions by: Clint Priest <https://github.com/cpriest>
 
-/***
- * Documenation Todo List:
- * 	- Pop-over Type Aliases?
- * 	- synchronize with existing documentation
- * 	- Expand on documentation with examples, samples & links
- *
- * 	- Create/Upload official @types/hain-plugin
- * 	- Have gulp file download from official source and build (... onchange?)
- */
-
-
 /**
  * @see https://github.com/simonlast/node-persist
  */
@@ -73,10 +62,7 @@ declare namespace NodePersist {
 }
 
 /**
- * This is the declaration to the main hain namespace
- *
- * ## Is it?
- * * Markdown *
+ * [[include:README.md]]
  */
 export declare namespace hain {
 

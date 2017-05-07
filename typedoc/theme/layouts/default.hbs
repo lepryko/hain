@@ -1,3 +1,9 @@
+{{!--#ifCond model.name '=='  'Plugin_Skeleton'}}
+	{{log "
+	Creating Document %s
+	" model.name}}
+	{{log model.comment}}
+{{/ifCond--}}
 <!doctype html>
 <html class="default no-js">
 <head>
@@ -17,16 +23,18 @@
 		<div class="col-3 col-menu menu-sticky-wrap sticky menu-highlight">
 			{{!--
 			--}}
+			nav-primary
 			<nav class="tsd-navigation primary">
 				<ul>
 					{{#each navigation.children}}
+
 						{{> navigation}}
 					{{/each}}
 				</ul>
 			</nav>
 			{{!--
 			--}}
-
+nav-secondary
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
 					{{#each toc.children}}

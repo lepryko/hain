@@ -13,7 +13,11 @@ gulp.task('deps', () => {
 });
 
 gulp.task('clean', () => {
-	return del(['./html/**','./html-default/**'])
+	return del(['./html/**'])
+});
+
+gulp.task('clean-default', () => {
+	return del(['./html-default/**'])
 });
 
 gulp.task('typedoc', ['deps', 'clean'], () => {
@@ -26,22 +30,22 @@ gulp.task('typedoc', ['deps', 'clean'], () => {
 			out    : './html',
 			rootDir: './src',
 
-			// theme: 'default',
-			theme: './theme',
-			name : 'hain Documentation',
+			theme   : './theme',
+			includes: './includes',
+			name    : 'hain Documentation',
 
-			entryPoint: 'hain',
+			// entryPoint: 'hain',
 
 			version            : true,
 			includeDeclarations: true,
 			excludeExternals   : true,
 			excludeNotExported : true,
 			hideSources        : true,
-			readme             : 'readme.md',
+			readme             : 'index.md',
 		}))
 });
 
-gulp.task('typedoc-default', ['deps', 'clean'], () => {
+gulp.task('typedoc-default', ['deps', 'clean-default'], () => {
 	return gulp
 		.src(["./src/*.d.ts"])
 		.pipe(typedoc({
@@ -52,10 +56,9 @@ gulp.task('typedoc-default', ['deps', 'clean'], () => {
 			rootDir: './src',
 
 			// theme: 'default',
-			theme: 'default',
-			name : 'hain Documentation',
-
-			entryPoint: 'hain',
+			theme   : 'default',
+			includes: './includes',
+			name    : 'hain Documentation',
 
 			version            : true,
 			includeDeclarations: true,
@@ -70,7 +73,7 @@ gulp.task('watch', ['default'], () => {
 	const opts = {
 		debounceDelay: 2000
 	};
-	gulp.watch(['./theme/**', './src/**'], opts, ['default']);
+	gulp.watch(['./*.md', './includes/**', './theme/**', './src/**', '../node_modules/typedoc-plugin-docs/*.js'], opts, ['default']);
 });
 
-gulp.task('default', ['typedoc', 'typedoc-default']);
+gulp.task('default', ['typedoc']);

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>ResponseObject | hain Documentation</title>
+	<title>package.json Format | hain Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -57,70 +57,43 @@
 				<li class="globals  ">
 					<a href="../globals.html"><em>Globals</em></a>
 				</li>
-				<li class=" tsd-kind-module">
-					<a class="tsd-kind-icon" href="../modules/guides.html">Guides</a>
-				</li>
 				<li class="current tsd-kind-module">
-					<a class="tsd-kind-icon" href="../modules/hain.html">hain</a>
+					<a class="tsd-kind-icon" href="guides.html">Guides</a>
 					<ul>
-						<li class="current tsd-kind-module tsd-parent-kind-module">
-							<a class="tsd-kind-icon" href="../modules/hain.plugin.html">Plugin</a>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.icon_url_format.html">Icon URL <wbr>Format</a>
 						</li>
 						<li class=" tsd-kind-module tsd-parent-kind-module">
-							<a class="tsd-kind-icon" href="../modules/hain.plugincontext.html">Plugin<wbr>Context</a>
+							<a class="tsd-kind-icon" href="guides.limitations.html">Limitations</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.plugin_directories.html">Plugin <wbr>Directories</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.plugin_skeleton.html">Plugin <wbr>Skeleton</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.share_your_plugins.html">Share your plugins</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.text_format.html">Text <wbr>Format</a>
+						</li>
+						<li class="current tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.package_json_format.html">package.json <wbr>Format</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="guides.preferences_json_format.html">preferences.json <wbr>Format</a>
 						</li>
 					</ul>
+				</li>
+				<li class=" tsd-kind-module">
+					<a class="tsd-kind-icon" href="hain.html">hain</a>
 				</li>
 			</ul>
 		</nav>
 		nav-secondary
 		<nav class="tsd-navigation secondary menu-sticky">
 			<ul class="before-current">
-				<li class=" tsd-kind-enum tsd-parent-kind-module">
-					<a href="../enums/hain.plugin.keybitfield.html" class="tsd-kind-icon">Key<wbr>Bitfield</a>
-				</li>
-				<li class=" tsd-kind-interface tsd-parent-kind-module">
-					<a href="hain.plugin.executedata.html" class="tsd-kind-icon">Execute<wbr>Data</a>
-				</li>
-				<li class=" tsd-kind-interface tsd-parent-kind-module">
-					<a href="hain.plugin.executekeydata.html" class="tsd-kind-icon">Execute<wbr>Key<wbr>Data</a>
-				</li>
-				<li class=" tsd-kind-interface tsd-parent-kind-module">
-					<a href="hain.plugin.indexedresult.html" class="tsd-kind-icon">Indexed<wbr>Result</a>
-				</li>
-			</ul>
-			<ul class="current">
-				<li class="current tsd-kind-interface tsd-parent-kind-module">
-					<a href="hain.plugin.responseobject.html" class="tsd-kind-icon">Response<wbr>Object</a>
-					<ul>
-						<li class=" tsd-kind-method tsd-parent-kind-interface">
-							<a href="hain.plugin.responseobject.html#add" class="tsd-kind-icon">add</a>
-						</li>
-						<li class=" tsd-kind-method tsd-parent-kind-interface">
-							<a href="hain.plugin.responseobject.html#remove" class="tsd-kind-icon">remove</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-			<ul class="after-current">
-				<li class=" tsd-kind-interface tsd-parent-kind-module">
-					<a href="hain.plugin.searchresult.html" class="tsd-kind-icon">Search<wbr>Result</a>
-				</li>
-				<li class=" tsd-kind-type-alias tsd-parent-kind-module">
-					<a href="../modules/hain.plugin.html#result" class="tsd-kind-icon">Result</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-module">
-					<a href="../modules/hain.plugin.html#execute" class="tsd-kind-icon">execute</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-module">
-					<a href="../modules/hain.plugin.html#renderpreview" class="tsd-kind-icon">render<wbr>Preview</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-module">
-					<a href="../modules/hain.plugin.html#search" class="tsd-kind-icon">search</a>
-				</li>
-				<li class=" tsd-kind-method tsd-parent-kind-module">
-					<a href="../modules/hain.plugin.html#startup" class="tsd-kind-icon">startup</a>
-				</li>
 			</ul>
 		</nav>
 	</div>
@@ -128,92 +101,55 @@
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>You can use this interface for adding or removing <a href="../modules/hain.plugin.html#result">Result</a> entries.  This interface
-					is always provided as the second argument to Plugin.search().</p>
-				</div>
-				<h3 id="example">Example</h3>
-				<pre><code><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{
-     <span class="hljs-comment">// Add an entry to the result set</span>
-     res.add({
-         <span class="hljs-attr">id</span>:    <span class="hljs-string">'temp'</span>,
-         <span class="hljs-attr">title</span>: <span class="hljs-string">'Fetching...'</span>,
-         <span class="hljs-attr">desc</span>:  <span class="hljs-string">'Please wait a second'</span>,
-     });
-
-     <span class="hljs-comment">// Remove entry 'temp' after `1000ms`</span>
-     setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span>
-         res.remove(<span class="hljs-string">'temp'</span>),
-     <span class="hljs-number">1000</span>);
+					<h1 id="package-json-format">package.json Format</h1>
+					<p>Hain plugin is just a nodejs module.<br>All plugin configurations must be located in package.json  </p>
+					<ul>
+						<li><code>name</code> String - Plugin name, must be prefixed with <code>hain-plugin-</code> (<strong>required</strong>)</li>
+						<li><code>author</code> String or Object - Name of Plugin Author (<strong>required</strong>)</li>
+						<li><code>version</code> String - Plugin version &#39;x.y.z&#39; (<strong>required</strong>)</li>
+						<li><code>dependencies</code> Array - If your plugin has external dependencies, include them here. (required if applicable)</li>
+						<li><code>hain</code> Object - (<strong>required</strong>)<ul>
+								<li><code>prefix</code> String - Plugin command prefix which starts with one of <code>?@=\/#</code>, e.g. &#39;/g&#39; (<strong>required</strong>)</li>
+								<li><code>usage</code> String - Plugin usage to be displayed in the empty ResultList. e.g. &#39;type /g&#39; (optional, default is <code>prefix</code> value)</li>
+								<li><code>icon</code> String - Icon URL, see <a href="{{ site.baseurl }}/docs/icon-url-format/">Icon URL Format</a> (<strong>required</strong>)</li>
+								<li><code>redirect</code> String - Query to redirect user input when user did select intro help (optional)</li>
+								<li><code>group</code> String - Default result group name (optional, default is <code>name</code> value)</li>
+							</ul>
+						</li>
+					</ul>
+					<p><strong>And...</strong></p>
+					<ul>
+						<li><code>keywords</code> Array\<String\> - Add Base API version <code>hain-0.6.0</code> for sharing your plugin (<strong>required</strong>)</li>
+					</ul>
+					<p><strong>Example</strong>  </p>
+					<ul>
+						<li>package.json</li>
+					</ul>
+					<pre><code class="lang-json">{
+  <span class="hljs-attr">"name"</span>: <span class="hljs-string">"hain-plugin-google"</span>,
+  <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Heejin Lee"</span>,
+  <span class="hljs-attr">"version"</span>: <span class="hljs-string">"0.0.1"</span>,
+  <span class="hljs-attr">"keywords"</span>: [
+    <span class="hljs-string">"hain-0.6.0"</span>
+  ],
+  <span class="hljs-attr">"hain"</span>: {
+    <span class="hljs-attr">"prefix"</span>: <span class="hljs-string">"/g"</span>,
+    <span class="hljs-attr">"usage"</span>: <span class="hljs-string">"type /g something to google it"</span>,
+    <span class="hljs-attr">"icon"</span>: <span class="hljs-string">"#fa fa-google"</span>,
+    <span class="hljs-attr">"redirect"</span>: <span class="hljs-string">"/g "</span>
+  }
 }
 </code></pre>
+				</div>
+				<dl class="tsd-comment-tags">
+					<dt class="htsd-tag-doc">doc</dt>
+					<dd class="htsd-tag-doc-comment"><p>-Type Guide</p>
+					</dd>
+					<dt class="htsd-tag-doc">doc</dt>
+					<dd class="htsd-tag-doc-comment"><p>-Title package.json Format</p>
+					</dd>
+				</dl>
 			</div>
-		</section>
-		<section class="tsd-panel-group tsd-member-group ">
-			<h2>Methods</h2>
-			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
-				<a name="add" class="tsd-anchor"></a>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon"><span>add<span class="tsd-signature-symbol">(</span>result<span class="tsd-signature-symbol">: </span><a href="hain.plugin.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol"> | </span><a href="hain.plugin.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
-						<span>
-						</span>
-					</li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>Add a <a href="hain.plugin.searchresult.html">SearchResult</a> to the result-set</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<div class="htsd-parameters">
-							<span class="htsd-name">
-								result:&nbsp;
-							</span>
-							<span class="htsd-type">
-								<a href="hain.plugin.searchresult.html" class="tsd-signature-type">SearchResult</a>
-								<span class="tsd-signature-symbol"> | </span>
-								<a href="hain.plugin.searchresult.html" class="tsd-signature-type">SearchResult</a><span class="tsd-signature-symbol">[]</span>
-							</span>
-							<span class="htsd-comment">
-								<div class="tsd-comment tsd-typography">
-									<p>The result to be added to the list of searchable values</p>
-								</div>
-							</span>
-						</div>
-					</li>
-				</ul>
-				<a name="remove" class="tsd-anchor"></a>
-				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
-					<li class="tsd-signature tsd-kind-icon"><span>remove<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></span>
-						<span>
-						</span>
-					</li>
-				</ul>
-				<ul class="tsd-descriptions">
-					<li class="tsd-description">
-						<div class="tsd-comment tsd-typography">
-							<div class="lead">
-								<p>You can remove a <a href="hain.plugin.searchresult.html">SearchResult</a> from the result-set that you previously added</p>
-							</div>
-						</div>
-						<h4 class="tsd-parameters-title">Parameters</h4>
-						<div class="htsd-parameters">
-							<span class="htsd-name">
-								id:&nbsp;
-							</span>
-							<span class="htsd-type">
-								<span class="tsd-signature-type">string</span>
-							</span>
-							<span class="htsd-comment">
-								<div class="tsd-comment tsd-typography">
-									<p>The <code>id</code> property of the <a href="hain.plugin.searchresult.html">SearchResult</a> previously added</p>
-								</div>
-							</span>
-						</div>
-					</li>
-				</ul>
-			</section>
 		</section>
 	</div>
 	<!--</div>-->
