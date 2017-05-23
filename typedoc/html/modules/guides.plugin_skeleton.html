@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Plugin Skeleton | hain Documentation</title>
+	<title>Plugin Skeleton
+	| hain Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,40 +55,45 @@
 		nav-primary
 		<nav class="tsd-navigation primary">
 			<ul>
-				<li class="globals  ">
-					<a href="../globals.html"><em>Globals</em></a>
-				</li>
-				<li class="current tsd-kind-module">
+				<li class="current tsd-kind-guide">
 					<a class="tsd-kind-icon" href="guides.html">Guides</a>
 					<ul>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.icon_url_format.html">Icon URL <wbr>Format</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.limitations.html">Limitations</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.plugin_directories.html">Plugin <wbr>Directories</a>
 						</li>
-						<li class="current tsd-kind-module tsd-parent-kind-module">
+						<li class="current tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.plugin_skeleton.html">Plugin <wbr>Skeleton</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.share_your_plugins.html">Share your plugins</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.text_format.html">Text <wbr>Format</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.package_json_format.html">package.json <wbr>Format</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.preferences_json_format.html">preferences.json <wbr>Format</a>
 						</li>
 					</ul>
 				</li>
 				<li class=" tsd-kind-module">
 					<a class="tsd-kind-icon" href="hain.html">hain</a>
+					<ul>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="hain.plugin.html">Plugin</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="hain.plugincontext.html">Plugin<wbr>Context</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
@@ -108,59 +114,31 @@
 ├─ preferences<span class="hljs-selector-class">.json</span>  - JSONSchema preferences<span class="hljs-selector-class">.json</span> (optional)
 ├─ index<span class="hljs-selector-class">.js</span>          - script <span class="hljs-selector-tag">code</span> (required)
 └─ ...
-</code></pre><p>and Your script code<code>index.js</code> should have a layout such as:</p>
+</code></pre><h2 id="index-js">index.js</h2>
 					<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
 
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startup</span>(<span class="hljs-params"></span>) </span>{
-    <span class="hljs-comment">// you can do some preparations here</span>
+    <span class="hljs-comment">// You can do any initialization here</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{
-    <span class="hljs-comment">// you can send your results here</span>
+    <span class="hljs-comment">// You can return your search results here</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload</span>) </span>{
-    <span class="hljs-comment">// you can run something when user selected your result</span>
+    <span class="hljs-comment">// When your result is selected, you can run something here</span>
   }
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderPreview</span>(<span class="hljs-params">id, payload, render</span>) </span>{
-    <span class="hljs-comment">// you can render preview with HTML</span>
+    <span class="hljs-comment">// You can render preview with HTML</span>
   }
 
   <span class="hljs-keyword">return</span> { startup, search, execute, renderPreview };
 };
 </code></pre>
-					<ul>
-						<li><p><strong>startup()</strong> (optional)<br>This function will be invoked on startup once.
-							you can do any preparations here.</p>
-						</li>
-						<li><p><strong>search(query, res)</strong> (optional)  </p>
-							<ul>
-								<li><code>query</code> String - user input</li>
-								<li><code>res</code> ResponseObject - response object, See <a href="{{ site.baseurl }}/docs/response-object/">ResponseObject</a>  </li>
-							</ul>
-							<p>This function will be invoked when user changed input text.  </p>
-							<blockquote>
-								<p><strong>Note:</strong> search function is ensured to be invoked once per <code>30ms</code></p>
-							</blockquote>
-						</li>
-						<li><p><strong>execute(id, payload)</strong> (optional)  </p>
-							<ul>
-								<li><code>id</code> Any - id of the selected <a href="{{ site.baseurl }}/docs/search-result/">SearchResult</a></li>
-								<li><code>payload</code> Any - payload of the selected <a href="{{ site.baseurl }}/docs/search-result/">SearchResult</a>  </li>
-							</ul>
-							<p>This function will be invoked when user selected a <a href="{{ site.baseurl }}/docs/search-result/">SearchResult</a> you send in the <strong>search</strong> function.</p>
-						</li>
-						<li><p><strong>renderPreview(id, payload, render)</strong> (optional)  </p>
-							<ul>
-								<li><code>id</code> Any - id of the selected <a href="{{ site.baseurl }}/docs/search-result/">SearchResult</a></li>
-								<li><code>payload</code> Any - payload of the selected <a href="{{ site.baseurl }}/docs/search-result/">SearchResult</a></li>
-								<li><code>render</code> Function - you can render html preview by calling this function</li>
-							</ul>
-						</li>
-					</ul>
-					<h2 id="example">Example</h2>
+					<p>See <a href="hain.plugin.html">hain.Plugin</a> for detailed information.</p>
+					<h2 id="example-plugin">Example Plugin</h2>
 					<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
 
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
@@ -173,10 +151,10 @@
 
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{
     res.add({
-      <span class="hljs-attr">id</span>: <span class="hljs-string">'1'</span>,
+      <span class="hljs-attr">id</span>:      <span class="hljs-string">'1'</span>,
       <span class="hljs-attr">payload</span>: query,
-      <span class="hljs-attr">title</span>: <span class="hljs-string">`You entered <span class="hljs-subst">${query}</span> now`</span>,
-      <span class="hljs-attr">desc</span>: <span class="hljs-string">`&lt;b&gt;<span class="hljs-subst">${query}</span>&lt;/b&gt;`</span>
+      <span class="hljs-attr">title</span>:   <span class="hljs-string">`You entered <span class="hljs-subst">${query}</span> now`</span>,
+      <span class="hljs-attr">desc</span>:    <span class="hljs-string">`&lt;b&gt;<span class="hljs-subst">${query}</span>&lt;/b&gt;`</span>
     });
   }
 
@@ -194,14 +172,6 @@
 };
 </code></pre>
 				</div>
-				<dl class="tsd-comment-tags">
-					<dt class="htsd-tag-doc">doc</dt>
-					<dd class="htsd-tag-doc-comment"><p>-Type Guide</p>
-					</dd>
-					<dt class="htsd-tag-doc">doc</dt>
-					<dd class="htsd-tag-doc-comment"><p>-Title Plugin Skeleton</p>
-					</dd>
-				</dl>
 			</div>
 		</section>
 	</div>

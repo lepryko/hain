@@ -1,20 +1,17 @@
-console.log('loading');
-
 module.exports = {
 	name: 'hain Documentation',
 
-	mode  : "file",
-	target: "ES2015",
+	mode  : 'file',
+	target: 'ES5',
 
-	out     : './html',
-	rootDir : './src',
-	theme   : './theme',
-	includes: './includes',
-	readme  : 'index.md',
+	out     : './html/',
+	rootDir : './src/',
+	theme   : './theme/',
+	includes: './includes/',
+	readme  : './index.md',
 
 	// entryPoint: 'hain',
 
-	version            : true,
 	includeDeclarations: true,
 	excludeExternals   : true,
 	excludeNotExported : true,

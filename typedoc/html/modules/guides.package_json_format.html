@@ -3,7 +3,8 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>package.json Format | hain Documentation</title>
+	<title>package.json Format
+	| hain Documentation</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,40 +55,45 @@
 		nav-primary
 		<nav class="tsd-navigation primary">
 			<ul>
-				<li class="globals  ">
-					<a href="../globals.html"><em>Globals</em></a>
-				</li>
-				<li class="current tsd-kind-module">
+				<li class="current tsd-kind-guide">
 					<a class="tsd-kind-icon" href="guides.html">Guides</a>
 					<ul>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.icon_url_format.html">Icon URL <wbr>Format</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.limitations.html">Limitations</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.plugin_directories.html">Plugin <wbr>Directories</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.plugin_skeleton.html">Plugin <wbr>Skeleton</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.share_your_plugins.html">Share your plugins</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.text_format.html">Text <wbr>Format</a>
 						</li>
-						<li class="current tsd-kind-module tsd-parent-kind-module">
+						<li class="current tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.package_json_format.html">package.json <wbr>Format</a>
 						</li>
-						<li class=" tsd-kind-module tsd-parent-kind-module">
+						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.preferences_json_format.html">preferences.json <wbr>Format</a>
 						</li>
 					</ul>
 				</li>
 				<li class=" tsd-kind-module">
 					<a class="tsd-kind-icon" href="hain.html">hain</a>
+					<ul>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="hain.plugin.html">Plugin</a>
+						</li>
+						<li class=" tsd-kind-module tsd-parent-kind-module">
+							<a class="tsd-kind-icon" href="hain.plugincontext.html">Plugin<wbr>Context</a>
+						</li>
+					</ul>
 				</li>
 			</ul>
 		</nav>
@@ -102,29 +108,26 @@
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
 					<h1 id="package-json-format">package.json Format</h1>
-					<p>Hain plugin is just a nodejs module.<br>All plugin configurations must be located in package.json  </p>
+					<p>A Hain plugin is just a nodejs module.  Plugin configuration is located in the package.json file.  </p>
 					<ul>
-						<li><code>name</code> String - Plugin name, must be prefixed with <code>hain-plugin-</code> (<strong>required</strong>)</li>
-						<li><code>author</code> String or Object - Name of Plugin Author (<strong>required</strong>)</li>
-						<li><code>version</code> String - Plugin version &#39;x.y.z&#39; (<strong>required</strong>)</li>
-						<li><code>dependencies</code> Array - If your plugin has external dependencies, include them here. (required if applicable)</li>
-						<li><code>hain</code> Object - (<strong>required</strong>)<ul>
-								<li><code>prefix</code> String - Plugin command prefix which starts with one of <code>?@=\/#</code>, e.g. &#39;/g&#39; (<strong>required</strong>)</li>
-								<li><code>usage</code> String - Plugin usage to be displayed in the empty ResultList. e.g. &#39;type /g&#39; (optional, default is <code>prefix</code> value)</li>
-								<li><code>icon</code> String - Icon URL, see <a href="{{ site.baseurl }}/docs/icon-url-format/">Icon URL Format</a> (<strong>required</strong>)</li>
-								<li><code>redirect</code> String - Query to redirect user input when user did select intro help (optional)</li>
-								<li><code>group</code> String - Default result group name (optional, default is <code>name</code> value)</li>
+						<li><code>name</code> <code>string</code> - Plugin name, must be prefixed with <code>hain-plugin-</code> (<strong>required</strong>)</li>
+						<li><code>author</code> <code>string</code> or <code>object</code> - Name of Plugin Author (<strong>required</strong>)</li>
+						<li><code>version</code> <code>string</code> - Plugin version &#39;x.y.z&#39; (<strong>required</strong>)</li>
+						<li><code>dependencies</code> <code>string[]</code> - If your plugin has external dependencies, include them here. (required if applicable)</li>
+						<li><code>hain</code> <code>object</code> - (<strong>required</strong>)<ul>
+								<li><code>prefix</code> <code>string</code> - Plugin command prefix which starts with one of <code>?@=\/#</code>, e.g. &#39;/g&#39; (<strong>required</strong>)</li>
+								<li><code>usage</code> <code>string</code> - Plugin usage to be displayed in the empty ResultList. e.g. &#39;type /g&#39; (optional, default is <code>prefix</code> value)</li>
+								<li><code>icon</code> <code>string</code> - Icon URL, see <a href="{{ site.baseurl }}/docs/icon-url-format/">Icon URL Format</a> (<strong>required</strong>)</li>
+								<li><code>redirect</code> <code>string</code> - Query to redirect user input when user did select intro help (optional)</li>
+								<li><code>group</code> <code>string</code> - Default result group name (optional, default is <code>name</code> value)</li>
 							</ul>
 						</li>
 					</ul>
 					<p><strong>And...</strong></p>
 					<ul>
-						<li><code>keywords</code> Array\<String\> - Add Base API version <code>hain-0.6.0</code> for sharing your plugin (<strong>required</strong>)</li>
+						<li><code>keywords</code> <code>string[]</code> - Add Base API version <code>hain-0.6.0</code> for sharing your plugin (<strong>required</strong>)</li>
 					</ul>
-					<p><strong>Example</strong>  </p>
-					<ul>
-						<li>package.json</li>
-					</ul>
+					<h2 id="example-package-json">Example package.json</h2>
 					<pre><code class="lang-json">{
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"hain-plugin-google"</span>,
   <span class="hljs-attr">"author"</span>: <span class="hljs-string">"Heejin Lee"</span>,
@@ -141,14 +144,6 @@
 }
 </code></pre>
 				</div>
-				<dl class="tsd-comment-tags">
-					<dt class="htsd-tag-doc">doc</dt>
-					<dd class="htsd-tag-doc-comment"><p>-Type Guide</p>
-					</dd>
-					<dt class="htsd-tag-doc">doc</dt>
-					<dd class="htsd-tag-doc-comment"><p>-Title package.json Format</p>
-					</dd>
-				</dl>
 			</div>
 		</section>
 	</div>

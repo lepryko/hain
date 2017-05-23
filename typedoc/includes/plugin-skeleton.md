@@ -10,58 +10,35 @@ hain-plugin-something
 └─ ...
 ```
  
-
-and Your script code`index.js` should have a layout such as:
+## index.js
 
 ```javascript
 'use strict';
 
 module.exports = (pluginContext) => {
   function startup() {
-    // you can do some preparations here
+    // You can do any initialization here
   }
  
   function search(query, res) {
-    // you can send your results here
+    // You can return your search results here
   }
 
   function execute(id, payload) {
-    // you can run something when user selected your result
+    // When your result is selected, you can run something here
   }
   
   function renderPreview(id, payload, render) {
-    // you can render preview with HTML
+    // You can render preview with HTML
   }
 
   return { startup, search, execute, renderPreview };
 };
 ```
 
-* **startup()** (optional)  
-This function will be invoked on startup once.
-you can do any preparations here.
+See [[hain.Plugin]] for detailed information.
 
-* **search(query, res)** (optional)  
-  - `query` String - user input
-  - `res` ResponseObject - response object, See [ResponseObject]({{ site.baseurl }}/docs/response-object/)  
-
-  This function will be invoked when user changed input text.  
-  
-  > **Note:** search function is ensured to be invoked once per `30ms`
-
-* **execute(id, payload)** (optional)  
-  - `id` Any - id of the selected [SearchResult]({{ site.baseurl }}/docs/search-result/)
-  - `payload` Any - payload of the selected [SearchResult]({{ site.baseurl }}/docs/search-result/)  
-
-  This function will be invoked when user selected a [SearchResult]({{ site.baseurl }}/docs/search-result/) you send in the **search** function.
-
-* **renderPreview(id, payload, render)** (optional)  
-  - `id` Any - id of the selected [SearchResult]({{ site.baseurl }}/docs/search-result/)
-  - `payload` Any - payload of the selected [SearchResult]({{ site.baseurl }}/docs/search-result/)
-  - `render` Function - you can render html preview by calling this function
-
-
-## Example
+## Example Plugin
 
 ```javascript
 'use strict';
@@ -76,10 +53,10 @@ module.exports = (pluginContext) => {
 
   function search(query, res) {
     res.add({
-      id: '1',
+      id:      '1',
       payload: query,
-      title: `You entered ${query} now`,
-      desc: `<b>${query}</b>`
+      title:   `You entered ${query} now`,
+      desc:    `<b>${query}</b>`
     });
   }
 

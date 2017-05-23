@@ -10,3 +10,5 @@ for(let key of Object.keys(ex)) {
 
 // console.log(module.exports);
 
+// console.log(this);
+

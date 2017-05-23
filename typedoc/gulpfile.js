@@ -10,10 +10,18 @@ gulp.task('deps', () => {
 	//   .pipe(gulp.dest('./tmp'));
 	// return gulp.src('./app/package.json')
 	//   .pipe(install({ production: true }));
+	return gulp
+		.src(['./../node_modules/typedoc-plugin-docs/theme.js*'])
+		.pipe(
+			gulp.dest('./theme/')
+		);
 });
 
 gulp.task('clean', () => {
-	return del(['./html/**'])
+	return Promise.all([
+		del(['./html/**']),
+	]);
+
 });
 
 gulp.task('clean-default', () => {
@@ -73,7 +81,7 @@ gulp.task('watch', ['default'], () => {
 	const opts = {
 		debounceDelay: 2000
 	};
-	gulp.watch(['./*.md', './includes/**', './theme/**', './src/**', '../node_modules/typedoc-plugin-docs/*.js'], opts, ['default']);
+	gulp.watch(['../node_modules/typedoc-markdown-theme/theme.js*','./*.md', './includes/**', './theme/**', './src/**', '../node_modules/typedoc-plugin-docs/*.js'], opts, ['default']);
 });
 
 gulp.task('default', ['typedoc']);

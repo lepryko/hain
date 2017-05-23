@@ -1,17 +1,17 @@
-{{#if isVisible}}
+{{!#if isVisible}}
     {{#if isLabel}}
         <li class="label {{cssClasses}}">
             <span>{{{wbr title}}}</span>
         </li>
     {{else}}
-        {{#if isGlobals}}
+        {{#if isGlobals}}{{!--
             <li class="globals {{#if isInPath}}current{{/if}} {{cssClasses}}">
                 <a href="{{relativeURL url}}"><em>{{{wbr title}}}</em></a>
-            </li>
+            </li>--}}
         {{else}}
             <li class="{{#if isInPath}}current{{/if}} {{cssClasses}}">
                 <a class="tsd-kind-icon" href="{{relativeURL url}}">{{{wbr title}}}</a>
-                {{#if isInPath}}
+                {{!#if isInPath}}
                     {{#if children}}
                         <ul>
                             {{#each children}}
@@ -19,8 +19,9 @@
                             {{/each}}
                         </ul>
                     {{/if}}
-                {{/if}}
+                {{!/if}}
             </li>
         {{/if}}
     {{/if}}
-{{/if}}
+{{!/if}}
+
