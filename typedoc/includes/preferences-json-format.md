@@ -1,8 +1,8 @@
 # preferences.json Format
 
-Hain supports Plugin Preferences by `preferences.json` using **JSONSchema**.  
-You can put your `preferences.json` into your plugin folder, then it works.  
-and You can open Preferences Dialog by entering `/preferences` in Hain.
+Hain supports Plugin Preferences by `preferences.json` using **JSONSchema**.
+
+Put your `preferences.json` into your plugin folder and you can open Preferences by entering `open preferences` in Hain.
 
 See <http://json-schema.org/> for JSONSchema
 
@@ -10,7 +10,7 @@ See <http://json-schema.org/> for JSONSchema
 
 You can make your plugin preferences like:
 <p align="center">
-  <img src="{{ site.baseurl }}/images/pref-sample1.png" />
+  <img src="../assets/images/pref-sample1.png" />
 </p>
 
 by following JSONSchema:
@@ -32,7 +32,7 @@ by following JSONSchema:
   }
 }
 ```
-
+ 
 and You can access the preferences via `pluginContext.preferences` such as:
 
 ```javascript
