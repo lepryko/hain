@@ -2,20 +2,21 @@
 
 A Hain plugin is just a nodejs module.  Plugin configuration is located in the package.json file.  
 
-* `name` `string` - Plugin name, must be prefixed with `hain-plugin-` (**required**)
-* `author` `string` or `object` - Name of Plugin Author (**required**)
-* `version` `string` - Plugin version 'x.y.z' (**required**)
-* `dependencies` `string[]` - If your plugin has external dependencies, include them here. (required if applicable)
-* `hain` `object` - (**required**)
-  - `prefix` `string` - Plugin command prefix which starts with one of `?@=\/#`, e.g. '/g' (**required**)
-  - `usage` `string` - Plugin usage to be displayed in the empty ResultList. e.g. 'type /g' (optional, default is `prefix` value)
-  - `icon` `string` - Icon URL, see [Icon URL Format]({{ site.baseurl }}/docs/icon-url-format/) (**required**)
-  - `redirect` `string` - Query to redirect user input when user did select intro help (optional)
-  - `group` `string` - Default result group name (optional, default is `name` value)
+<div class="htsd-table-hide"></div>
 
-**And...**
-
-* `keywords` `string[]` - Add Base API version `hain-0.6.0` for sharing your plugin (**required**)
+|   |   |
+|---|---|
+| ● name: _string_              | Plugin name, must be prefixed `hain-plugin` |
+| ● author: _string_ ⏐ _object_	| Plugin Author Name |
+| ● version: _string_   		| [Semantic Plugin Version](http://semver.org/) e.g. 'x.y.z' |
+| ● dependencies?: _string[]_ 	| If your plugin has external dependencies, include them here. <span class="tsd-flag ts-flagOptional">Optional</span> |
+| ● hain: _object_				|  |
+|   ⚪ prefix: _string_			| Plugin command prefix which starts with one of `?@=\/#` |
+|   ⚪ usage?: _string_			| Plugin usage to be displayed with an empty query with your `prefix` <span class="tsd-flag ts-flagOptional">Optional</span> |
+|   ⚪ icon: _string_			| Icon URL, see [Icon URL Format]({{ site.baseurl }}/docs/icon-url-format/) |
+|   ⚪ redirect?: _string_		| Query to redirect user input when user did select intro help <span class="tsd-flag ts-flagOptional">Optional</span> |
+|   ⚪ group?: _string_			| Default result group name _(defaults to `name` value)_ <span class="tsd-flag ts-flagOptional">Optional</span> |
+|   ⚪ keywords: _string[]_		| Add Base API version `hain-0.6.0` for sharing your plugin |
 
 ## Example package.json  
 

@@ -52,7 +52,6 @@
 <div class="container container-main">
 	<!--<div class="row">-->
 	<div class="col-3 col-menu menu-sticky-wrap sticky menu-highlight">
-		nav-primary
 		<nav class="tsd-navigation primary">
 			<ul>
 				<li class="current tsd-kind-guide">
@@ -97,7 +96,6 @@
 				</li>
 			</ul>
 		</nav>
-		nav-secondary
 		<nav class="tsd-navigation secondary menu-sticky">
 			<ul class="before-current">
 			</ul>
@@ -109,24 +107,61 @@
 				<div class="lead">
 					<h1 id="package-json-format">package.json Format</h1>
 					<p>A Hain plugin is just a nodejs module.  Plugin configuration is located in the package.json file.  </p>
-					<ul>
-						<li><code>name</code> <code>string</code> - Plugin name, must be prefixed with <code>hain-plugin-</code> (<strong>required</strong>)</li>
-						<li><code>author</code> <code>string</code> or <code>object</code> - Name of Plugin Author (<strong>required</strong>)</li>
-						<li><code>version</code> <code>string</code> - Plugin version &#39;x.y.z&#39; (<strong>required</strong>)</li>
-						<li><code>dependencies</code> <code>string[]</code> - If your plugin has external dependencies, include them here. (required if applicable)</li>
-						<li><code>hain</code> <code>object</code> - (<strong>required</strong>)<ul>
-								<li><code>prefix</code> <code>string</code> - Plugin command prefix which starts with one of <code>?@=\/#</code>, e.g. &#39;/g&#39; (<strong>required</strong>)</li>
-								<li><code>usage</code> <code>string</code> - Plugin usage to be displayed in the empty ResultList. e.g. &#39;type /g&#39; (optional, default is <code>prefix</code> value)</li>
-								<li><code>icon</code> <code>string</code> - Icon URL, see <a href="{{ site.baseurl }}/docs/icon-url-format/">Icon URL Format</a> (<strong>required</strong>)</li>
-								<li><code>redirect</code> <code>string</code> - Query to redirect user input when user did select intro help (optional)</li>
-								<li><code>group</code> <code>string</code> - Default result group name (optional, default is <code>name</code> value)</li>
-							</ul>
-						</li>
-					</ul>
-					<p><strong>And...</strong></p>
-					<ul>
-						<li><code>keywords</code> <code>string[]</code> - Add Base API version <code>hain-0.6.0</code> for sharing your plugin (<strong>required</strong>)</li>
-					</ul>
+					<div class="htsd-table-hide"></div>
+					<table>
+						<thead>
+							<tr>
+								<th></th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>● name: <em>string</em></td>
+								<td>Plugin name, must be prefixed <code>hain-plugin</code></td>
+							</tr>
+							<tr>
+								<td>● author: <em>string</em> ⏐ <em>object</em></td>
+								<td>Plugin Author Name</td>
+							</tr>
+							<tr>
+								<td>● version: <em>string</em></td>
+								<td><a href="http://semver.org/">Semantic Plugin Version</a> e.g. &#39;x.y.z&#39;</td>
+							</tr>
+							<tr>
+								<td>● dependencies?: <em>string[]</em></td>
+								<td>If your plugin has external dependencies, include them here. <span class="tsd-flag ts-flagOptional">Optional</span></td>
+							</tr>
+							<tr>
+								<td>● hain: <em>object</em></td>
+								<td></td>
+							</tr>
+							<tr>
+								<td>  ⚪ prefix: <em>string</em></td>
+								<td>Plugin command prefix which starts with one of <code>?@=\/#</code></td>
+							</tr>
+							<tr>
+								<td>  ⚪ usage?: <em>string</em></td>
+								<td>Plugin usage to be displayed with an empty query with your <code>prefix</code> <span class="tsd-flag ts-flagOptional">Optional</span></td>
+							</tr>
+							<tr>
+								<td>  ⚪ icon: <em>string</em></td>
+								<td>Icon URL, see <a href="{{ site.baseurl }}/docs/icon-url-format/">Icon URL Format</a></td>
+							</tr>
+							<tr>
+								<td>  ⚪ redirect?: <em>string</em></td>
+								<td>Query to redirect user input when user did select intro help <span class="tsd-flag ts-flagOptional">Optional</span></td>
+							</tr>
+							<tr>
+								<td>  ⚪ group?: <em>string</em></td>
+								<td>Default result group name <em>(defaults to <code>name</code> value)</em> <span class="tsd-flag ts-flagOptional">Optional</span></td>
+							</tr>
+							<tr>
+								<td>  ⚪ keywords: <em>string[]</em></td>
+								<td>Add Base API version <code>hain-0.6.0</code> for sharing your plugin</td>
+							</tr>
+						</tbody>
+					</table>
 					<h2 id="example-package-json">Example package.json</h2>
 					<pre><code class="lang-json">{
   <span class="hljs-attr">"name"</span>: <span class="hljs-string">"hain-plugin-google"</span>,

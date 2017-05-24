@@ -882,8 +882,16 @@ img { max-width: 100%; }
 .tsd-signature { background-color: #fbfbfb; border: 1px solid #bbb; border-width: 1px 0; }
 .tsd-descriptions { margin-bottom: 30px; }
 
-.lead P { margin: .75em 0; }
-.lead PRE { margin: 1em 0; }
+DIV.tsd-comment.tsd-typography > DIV.lead { font-size: 16px; line-height: 1.5;  }
+DIV.tsd-comment.tsd-typography > DIV.lead UL LI { margin-bottom: .5em; }
+DIV.tsd-comment.tsd-typography > DIV.lead P { margin: .75em 0; }
+DIV.tsd-comment.tsd-typography > DIV.lead PRE { margin: 1em 0; }
+DIV.lead TABLE TH:empty { display: none; }
+DIV.lead DIV.htsd-table-hide + TABLE TD { padding: 2px 10px; border: none; vertical-align: top; }
+DIV.lead DIV.htsd-table-hide + TABLE tr { border: none; background-color: #FFFFFF; }
+/*DIV.lead DIV.htsd-table-hide + TABLE tr:nth-child(2n) { background-color: #FFFFFF; }*/
+DIV.lead DIV.htsd-table-hide + TABLE td:first-child { white-space: nowrap; font-family: Menlo, Monaco, Consolas, "Courier New", monospace;}
+
 
 .htsd-parameters {
 	display: grid;
