@@ -20,6 +20,7 @@
 ### Typedoc
  - [ ] [[include:xyz.md]] from within markdown doesn't work
  - [ ] Why doesn't [[Icon URL Format|Icon URL Format]] work?
+ - [ ] Why doesn't [[Guides]] work?
     - Consider adding check against "originalName" as a quick fix.
 
 
