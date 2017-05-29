@@ -7,7 +7,7 @@
 
  - [x] Incorporate Guides into typedoc build process
  - [ ] Expand on documentation with examples, samples & links
- - [ ] **BUG**: ++Overlapping Legend/Left Menu / Content++
+ - [x] **BUG**: ++Overlapping Legend/Left Menu / Content++
  - [x] synchronize with existing documentation
  - [ ] Create/Upload official @types/hain-plugin
  - [ ] hain-0.6.0 reference be pulled in from latest API version?

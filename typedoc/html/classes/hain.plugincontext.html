@@ -1,0 +1,383 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>PluginContext | hain Documentation</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body class="csspositionsticky">
+<header style="position: sticky; top: 0px; z-index: 100;">
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html"><img src="../assets/images/logo.png"></a>
+					<a href="../index.html" class="title">hain Documentation</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<div class="tsd-select-label">All</div>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="htsd-header-spacer"></div>
+<div class="container container-main">
+	<!--<div class="row">-->
+	<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+		<nav class="tsd-navigation primary">
+			<ul>
+				<li class=" tsd-kind-guide">
+					<a class="tsd-kind-icon" href="../modules/guides.html">Guides</a>
+					<ul>
+					</ul>
+				</li>
+				<li class="current tsd-kind-module">
+					<a class="tsd-kind-icon" href="../modules/hain.html">hain</a>
+				</li>
+			</ul>
+		</nav>
+		<nav class="tsd-navigation secondary menu-sticky">
+			<ul class="before-current">
+				<li class=" tsd-kind-class tsd-parent-kind-module">
+					<a href="hain.plugin.html" class="tsd-kind-icon">Plugin</a>
+				</li>
+			</ul>
+			<ul class="current">
+				<li class="current tsd-kind-class tsd-parent-kind-module">
+					<a href="hain.plugincontext.html" class="tsd-kind-icon">Plugin<wbr>Context</a>
+					<ul>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.app.html" class="tsd-kind-icon">App</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.clipboard.html" class="tsd-kind-icon">Clipboard</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.indexer.html" class="tsd-kind-icon">Indexer</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.logger.html" class="tsd-kind-icon">Logger</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.matchutil.html" class="tsd-kind-icon">Match<wbr>Util</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.pluginlocalstorage.html" class="tsd-kind-icon">Plugin<wbr>Local<wbr>Storage</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.preferences.html" class="tsd-kind-icon">Preferences</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.shell.html" class="tsd-kind-icon">Shell</a>
+						</li>
+						<li class=" tsd-kind-interface tsd-parent-kind-class">
+							<a href="../interfaces/hain.plugincontext.toaster.html" class="tsd-kind-icon">Toaster</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#compatible_api_versions" class="tsd-kind-icon">COMPATIBLE_<wbr>API_<wbr>VERSIONS</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#current_api_version" class="tsd-kind-icon">CURRENT_<wbr>API_<wbr>VERSION</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#dev_plugin_repo" class="tsd-kind-icon">DEV_<wbr>PLUGIN_<wbr>REPO</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#internal_plugin_repo" class="tsd-kind-icon">INTERNAL_<wbr>PLUGIN_<wbr>REPO</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#main_plugin_repo" class="tsd-kind-icon">MAIN_<wbr>PLUGIN_<wbr>REPO</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#___plugin_preinstall_dir" class="tsd-kind-icon">___PLUGIN_<wbr>PREINSTALL_<wbr>DIR</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#___plugin_preuninstall_file" class="tsd-kind-icon">___PLUGIN_<wbr>PREUNINSTALL_<wbr>FILE</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#app-1" class="tsd-kind-icon">app</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#clipboard-1" class="tsd-kind-icon">clipboard</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#globalpreferences" class="tsd-kind-icon">global<wbr>Preferences</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#indexer-1" class="tsd-kind-icon">indexer</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#localstorage" class="tsd-kind-icon">local<wbr>Storage</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#logger-1" class="tsd-kind-icon">logger</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#matchutil-1" class="tsd-kind-icon">match<wbr>Util</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#preferences-1" class="tsd-kind-icon">preferences</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#shell-1" class="tsd-kind-icon">shell</a>
+						</li>
+						<li class=" tsd-kind-property tsd-parent-kind-class">
+							<a href="hain.plugincontext.html#toast" class="tsd-kind-icon">toast</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<ul class="after-current">
+				<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+					<a href="../modules/hain.html#bitfield" class="tsd-kind-icon">bitfield</a>
+				</li>
+				<li class=" tsd-kind-type-alias tsd-parent-kind-module">
+					<a href="../modules/hain.html#milliseconds" class="tsd-kind-icon">milliseconds</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<div class="col-9 col-content">
+		<section class="tsd-panel tsd-comment">
+			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>The main pluginContext parameter your plugin is passed when loaded</p>
+				</div>
+				<h3 id="example">Example</h3>
+				<pre><code><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> app = pluginContext.app;
+    <span class="hljs-keyword">const</span> toast = pluginContext.toast;
+    <span class="hljs-keyword">const</span> logger = pluginContext.logger;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startup</span>(<span class="hljs-params"></span>) </span>{ ... }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{ ... }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload</span>) </span>{
+        <span class="hljs-keyword">if</span> (id === <span class="hljs-string">'1'</span>) {
+            toast.enqueue(<span class="hljs-string">'This is message'</span>, <span class="hljs-number">1500</span>);
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (id == <span class="hljs-string">'2'</span>) {
+            app.close();
+        } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (id == <span class="hljs-string">'3'</span>) {
+            logger.log(<span class="hljs-string">'this is log'</span>);
+        }
+    }
+
+    <span class="hljs-keyword">return</span> { startup, search, execute };
+};
+</code></pre>
+			</div>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>Properties</h2>
+			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+				<a name="compatible_api_versions" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">COMPATIBLE_<wbr>API_<wbr>VERSIONS<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string[]</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Array of API versions that are still compatible with current version</p>
+					</div>
+				</div>
+				<a name="current_api_version" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">CURRENT_<wbr>API_<wbr>VERSION<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Current version of the API that is available</p>
+					</div>
+				</div>
+				<a name="dev_plugin_repo" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">DEV_<wbr>PLUGIN_<wbr>REPO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Directory of development plugins (local / manually installed)</p>
+					</div>
+				</div>
+				<a name="internal_plugin_repo" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">INTERNAL_<wbr>PLUGIN_<wbr>REPO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="main_plugin_repo" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">MAIN_<wbr>PLUGIN_<wbr>REPO<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Directory of hain managed plugins</p>
+					</div>
+				</div>
+				<a name="___plugin_preinstall_dir" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">___PLUGIN_<wbr>PREINSTALL_<wbr>DIR<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="___plugin_preuninstall_file" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">___PLUGIN_<wbr>PREUNINSTALL_<wbr>FILE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+				<a name="app-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">app<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.app.html" class="tsd-signature-type">App</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to application functions</p>
+					</div>
+				</div>
+				<a name="clipboard-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">clipboard<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.clipboard.html" class="tsd-signature-type">Clipboard</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to clipboard functions</p>
+					</div>
+				</div>
+				<a name="globalpreferences" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">global<wbr>Preferences<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.preferences.html" class="tsd-signature-type">Preferences</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to hain global preferences</p>
+					</div>
+				</div>
+				<a name="indexer-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">indexer<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.indexer.html" class="tsd-signature-type">Indexer</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to hain plugin indexer</p>
+					</div>
+				</div>
+				<a name="localstorage" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">local<wbr>Storage<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.pluginlocalstorage.html" class="tsd-signature-type">PluginLocalStorage</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to plugin local storage</p>
+					</div>
+				</div>
+				<a name="logger-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">logger<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.logger.html" class="tsd-signature-type">Logger</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to logging functionality</p>
+					</div>
+				</div>
+				<a name="matchutil-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">match<wbr>Util<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.matchutil.html" class="tsd-signature-type">MatchUtil</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to matching utility functions</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt class="htsd-tag-deprecated">deprecated</dt>
+						<dd class="htsd-tag-deprecated-comment"></dd>
+					</dl>
+				</div>
+				<a name="preferences-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">preferences<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.preferences.html" class="tsd-signature-type">Preferences</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to plugin preferences</p>
+					</div>
+				</div>
+				<a name="shell-1" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">shell<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.shell.html" class="tsd-signature-type">Shell</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to shell functionality</p>
+					</div>
+				</div>
+				<a name="toast" class="tsd-anchor"></a>
+				<div class="tsd-signature tsd-kind-icon">toast<span class="tsd-signature-symbol">:</span> <a href="../interfaces/hain.plugincontext.toaster.html" class="tsd-signature-type">Toaster</a></div>
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>Access to toast functionality</p>
+					</div>
+				</div>
+			</section>
+		</section>
+	</div>
+	<!--</div>-->
+	<div class="clearfix"></div>
+	<footer class="with-border-bottom">
+		<details class="container">
+			<summary><h2>Legend</h2></summary>
+			<div class="tsd-legend-group">
+				<ul class="tsd-legend">
+					<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+					<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+					<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+					<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+					<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+					<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+					<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+					<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+					<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+					<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+					<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+					<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+					<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+					<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+					<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+					<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+					<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+					<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+					<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+					<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+					<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+					<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+					<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+				</ul>
+				<ul class="tsd-legend">
+					<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+					<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+				</ul>
+			</div>
+		</details>
+	</footer>
+	<div class="container tsd-generator">
+		<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+	</div>
+	<div class="overlay"></div>
+	<script src="../assets/js/main.js"></script>
+	<script>if(location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</div>
+</body>
+</html>
