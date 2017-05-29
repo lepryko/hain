@@ -883,9 +883,8 @@ img { max-width: 100%; }
 .tsd-signature { background-color: #fbfbfb; border: 1px solid #bbb; border-width: 1px 0; }
 .tsd-descriptions { margin-bottom: 30px; }
 
-xDIV.tsd-comment.tsd-typography > DIV.lead { font-size: 16px; line-height: 1.5; }
-DIV.tsd-comment.tsd-typography > DIV.lead CODE { border-radius: 2px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); border: 1px solid #F2F3F3; }
-DIV.tsd-comment.tsd-typography > DIV.lead PRE > CODE { box-shadow: none; }
+CODE { border-radius: 2px; box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); border: 1px solid #F2F3F3; }
+PRE > CODE { box-shadow: none; }
 DIV.tsd-comment.tsd-typography > DIV.lead UL LI { margin-bottom: .5em; }
 DIV.tsd-comment.tsd-typography > DIV.lead P { margin: .75em 0; }
 DIV.tsd-comment.tsd-typography > DIV.lead PRE { margin: 1em 0; }

@@ -12,7 +12,17 @@ export namespace Guides {
 	 * @td:Type Guide
 	 * @td:Title Plugin Skeleton
 	 **/
-	export namespace Plugin_Skeleton { }
+	export namespace Plugin_Skeleton {
+	}
+
+	/**
+	 * [[include:using-typescript-definitions.md]]
+	 *
+	 * @td:Type Guide
+	 * @td:Title Using Typescript Definitions
+	 **/
+	export namespace Using_Typescript_Definitions {
+	}
 
 	/**
 	 * [[include:plugin-directories.md]]
