@@ -26,7 +26,7 @@ export namespace Guides {
 	 * [[include:package-json-format.md]]
 	 *
 	 * @td:Type Guide
-	 * @td:Title package.json Format
+	 * @td:Title package․json Format
 	 **/
 	export namespace package_json_Format { }
 

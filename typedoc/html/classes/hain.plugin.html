@@ -74,9 +74,6 @@
 							<a href="../enums/hain.plugin.keybitfield.html" class="tsd-kind-icon">Key<wbr>Bitfield</a>
 						</li>
 						<li class=" tsd-kind-interface tsd-parent-kind-class">
-							<a href="../interfaces/hain.plugin.baseresult.html" class="tsd-kind-icon">Base<wbr>Result</a>
-						</li>
-						<li class=" tsd-kind-interface tsd-parent-kind-class">
 							<a href="../interfaces/hain.plugin.executedata.html" class="tsd-kind-icon">Execute<wbr>Data</a>
 						</li>
 						<li class=" tsd-kind-interface tsd-parent-kind-class">
@@ -123,8 +120,33 @@
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
 				<div class="lead">
-					<p>These are the methods your plugin may implement</p>
+					<p>These are the functions your plugin may implement</p>
 				</div>
+				<p>Your plugin should return an object with references to the implemented functions.</p>
+				<p>Note that your exported function is receiving an argument of <a href="hain.plugincontext.html">pluginContext</a>.</p>
+				<h3 id="example">Example</h3>
+				<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startup</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-comment">// You can do any initialization here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{
+        <span class="hljs-comment">// You can return your search results here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload, extra</span>) </span>{
+        <span class="hljs-comment">// When your result is selected, you can run something here</span>
+    }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">renderPreview</span>(<span class="hljs-params">id, payload, render</span>) </span>{
+        <span class="hljs-comment">// You can render preview with HTML</span>
+    }
+
+    <span class="hljs-keyword">return</span> { startup, search, execute, renderPreview };
+};
+</code></pre>
 			</div>
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
@@ -195,7 +217,8 @@
 					<li class="tsd-description">
 						<div class="tsd-comment tsd-typography">
 							<div class="lead">
-								<p>If present, is called when an <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a> is selected from the list</p>
+								<p>If present, is called when an <a href="../interfaces/hain.plugin.searchresult.html">SearchResult</a> or <a href="../interfaces/hain.plugin.indexedresult.html">IndexedResult</a> is selected from
+								the list and that result included a <code>preview</code> value.</p>
 							</div>
 						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -279,7 +302,7 @@
 							<dl class="tsd-comment-tags">
 								<dt class="htsd-tag-since">since</dt>
 								<dd class="htsd-tag-since-comment"><p>v0.6   <code>search()</code> is only called when the query begins with your
-									<a href="../modules/guides.preferences_json_format.html">package.json</a> prefix value</p>
+									<a href="../modules/guides.package_json_format.html">package.json</a> prefix value</p>
 								</dd>
 							</dl>
 						</div>

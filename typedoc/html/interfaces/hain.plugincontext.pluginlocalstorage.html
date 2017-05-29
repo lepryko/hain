@@ -226,9 +226,38 @@
 	<div class="col-9 col-content">
 		<section class="tsd-panel tsd-comment">
 			<div class="tsd-comment tsd-typography">
+				<div class="lead">
+					<p>Use this to persist non-preference data for your plugin</p>
+				</div>
+				<p>This object is an instance of <a href="https://github.com/simonlast/node-persist">simonlast/node-persist</a></p>
 				<dl class="tsd-comment-tags">
-					<dt class="htsd-tag-since">since</dt>
-					<dd class="htsd-tag-since-comment"><p>v0.5</p>
+					<dt class="htsd-tag-note:">note:</dt>
+					<dd class="htsd-tag-note:-comment"><p>The interface listed here should be up to date, but the github repository is the final implementation.</p>
+						<h3 id="example">Example</h3>
+						<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
+
+<span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
+    <span class="hljs-keyword">const</span> localStorage = pluginContext.localStorage;
+    <span class="hljs-keyword">const</span> logger       = pluginContext.logger;
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">startup</span>(<span class="hljs-params"></span>) </span>{ ... }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">search</span>(<span class="hljs-params">query, res</span>) </span>{ ... }
+
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload, extra</span>) </span>{
+        <span class="hljs-keyword">const</span> last = localStorage.getItemSync(<span class="hljs-string">'last_execute_time'</span>);
+        <span class="hljs-keyword">const</span> now  = DateTime.now();
+
+        logger.log(<span class="hljs-string">'Last execution time: %d, updating to %d'</span>, last, now);
+
+        localStorage.setItemSync(<span class="hljs-string">'last_execute_time'</span>, now);
+
+        <span class="hljs-comment">// ...</span>
+    }
+
+    <span class="hljs-keyword">return</span> { startup, search, execute};
+};
+</code></pre>
 					</dd>
 				</dl>
 			</div>

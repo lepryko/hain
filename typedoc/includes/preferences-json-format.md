@@ -53,12 +53,12 @@ module.exports = (pluginContext) => {
 
 	function startup() { ... }
 	function search(query, res) { ... }
-	function execute(id, payload) { ... }
+	function execute(id, payload, extra) { ... }
 
 	return { startup, search, execute };
 };
 ```
-See [[hain.PluginContext.Preferences]] for details.
+See [[Preferences]] for details.
 
 ## Non-Standard Options
 

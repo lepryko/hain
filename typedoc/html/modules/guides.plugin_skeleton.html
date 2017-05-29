@@ -76,7 +76,7 @@
 							<a class="tsd-kind-icon" href="guides.text_format.html">Text <wbr>Format</a>
 						</li>
 						<li class=" tsd-kind-guide tsd-parent-kind-module">
-							<a class="tsd-kind-icon" href="guides.package_json_format.html">package.json <wbr>Format</a>
+							<a class="tsd-kind-icon" href="guides.package_json_format.html">package․json <wbr>Format</a>
 						</li>
 						<li class=" tsd-kind-guide tsd-parent-kind-module">
 							<a class="tsd-kind-icon" href="guides.preferences_json_format.html">preferences.json <wbr>Format</a>
@@ -105,6 +105,7 @@
 ├─ index<span class="hljs-selector-class">.js</span>          - script <span class="hljs-selector-tag">code</span> (required)
 └─ ...
 </code></pre><h2 id="index-js">index.js</h2>
+					<!-- [[include:example-basic.md]] -->
 					<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
 
 <span class="hljs-built_in">module</span>.exports = <span class="hljs-function">(<span class="hljs-params">pluginContext</span>) =&gt;</span> {
@@ -116,7 +117,7 @@
         <span class="hljs-comment">// You can return your search results here</span>
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload, extra</span>) </span>{
         <span class="hljs-comment">// When your result is selected, you can run something here</span>
     }
 
@@ -127,7 +128,7 @@
     <span class="hljs-keyword">return</span> { startup, search, execute, renderPreview };
 };
 </code></pre>
-					<p>See <a href="../classes/hain.plugin.html">hain.Plugin</a> for detailed information.</p>
+					<p>See <a href="../classes/hain.plugin.html">Plugin</a> for detailed information.</p>
 					<h2 id="example-plugin">Example Plugin</h2>
 					<pre><code class="lang-javascript"><span class="hljs-meta">'use strict'</span>;
 
@@ -148,7 +149,7 @@
         });
     }
 
-    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload</span>) </span>{
+    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">execute</span>(<span class="hljs-params">id, payload, extra</span>) </span>{
         <span class="hljs-keyword">if</span> (id === <span class="hljs-string">'1'</span>) {
             toast.enqueue(<span class="hljs-string">`<span class="hljs-subst">${payload}</span> was entered`</span>);
         }

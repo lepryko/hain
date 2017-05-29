@@ -61,6 +61,43 @@ declare namespace NodePersist {
 	}
 }
 
+declare namespace hain_ {
+	/**
+	 */
+	interface BaseResult {
+		/**
+		 * An identifier (recommended to be unique), used as argument to execute(), default is `undefined`
+		 */
+		id?: any;
+
+		/**
+		 * Extra information, used as second argument to execute(), default is `undefined`
+		 */
+		payload?: any;
+
+		/**
+		 * Icon URL, default is `icon` of [package.json](../modules/guides.package_json_format.html).
+		 * See [Icon URL Format](../modules/guides.icon_url_format.html)
+		 */
+		icon?: string;
+
+		/**
+		 * Redirection query, default is undefined
+		 */
+		redirect?: string;
+
+		/**
+		 * Result grouping name, default is `group` of [package.json](../modules/guides.package_json_format.html)
+		 **/
+		group?: string;
+
+		/**
+		 * Whether it has HTML Preview, default is false; used with render().
+		 */
+		preview?: boolean;
+	}
+}
+
 /**
  * [[include:README.md]]
  */
@@ -71,7 +108,14 @@ export declare namespace hain {
 	export type bitfield = number;
 
 	/**
-	 * These are the methods your plugin may implement
+	 * These are the functions your plugin may implement
+	 *
+	 * Your plugin should return an object with references to the implemented functions.
+	 *
+	 * Note that your exported function is receiving an argument of [[PluginContext|pluginContext]].
+	 *
+	 * ### Example
+	 * [[include:example-basic.md]]
 	 */
 	export class Plugin {
 
@@ -87,7 +131,7 @@ export declare namespace hain {
 		 * @param res    The results of the query should be added to this object
 		 *
 		 * @since v0.6   `search()` is only called when the query begins with your
-		 * 					[package.json](../modules/guides.preferences_json_format.html) prefix value
+		 * 					[package.json](../modules/guides.package_json_format.html) prefix value
 		 */
 		search(query: string, res: Plugin.ResponseObject): void;
 
@@ -101,7 +145,8 @@ export declare namespace hain {
 		execute?(id: any, payload: any, extra: Plugin.ExecuteData): void;
 
 		/**
-		 * If present, is called when an [[SearchResult]] or [[IndexedResult]] is selected from the list
+		 * If present, is called when an [[SearchResult]] or [[IndexedResult]] is selected from
+		 * the list and that result included a `preview` value.
 		 *
 		 * @param id         id of the selected [[SearchResult]] or [[IndexedResult]]
 		 * @param payload    payload of the selected [[SearchResult]] or [[IndexedResult]]
@@ -113,8 +158,9 @@ export declare namespace hain {
 	export namespace Plugin {
 
 		/**
-		 * You can use this interface for adding or removing [[SearchResult]] entries.  This interface
-		 *  is always provided as the second argument to Plugin.search().
+		 * Use this interface to add or remove [[SearchResult]] entries.
+		 *
+		 * This interface is always provided as the second argument to [[Plugin.search]]().
 		 *
 		 * ### Example
 		 * ```
@@ -149,10 +195,17 @@ export declare namespace hain {
 			remove(id: string): void;
 		}
 
+		/**
+		 * This data structure includes additional information from an activation event.
+		 */
 		export interface ExecuteData {
+			/** The modifier keys that were active during an activation event. */
 			keys: ExecuteKeyData;
 		}
 
+		/**
+		 * This data structure represents the state of modifier keys at a specific point in time.
+		 */
 		export interface ExecuteKeyData {
 			/** True if the alt was pressed along with execute key/click */
 			altKey: boolean;
@@ -191,45 +244,8 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
 		 */
-		interface BaseResult {
-			/**
-			 * An identifier (recommended to be unique), used as argument to execute(), default is `undefined`
-			 */
-			id?: any;
-
-			/**
-			 * Extra information, used as second argument to execute(), default is `undefined`
-			 */
-			payload?: any;
-
-			/**
-			 * Icon URL, default is `icon` of [package.json](../modules/guides.preferences_json_format.html).
-			 * See [Icon URL Format](../modules/guides.icon_url_format.html)
-			 */
-			icon?: string;
-
-			/**
-			 * Redirection query, default is undefined
-			 */
-			redirect?: string;
-
-			/**
-			 * Result grouping name, default is `group` of [package.json](../modules/guides.preferences_json_format.html)
-			 **/
-			group?: string;
-
-			/**
-			 * Whether it has HTML Preview, default is false; used with render().
-			 */
-			preview?: boolean;
-		}
-
-		/**
-		 * @since v0.5
-		 */
-		export interface SearchResult extends BaseResult {
+		export interface SearchResult extends hain_.BaseResult {
 			/**
 			 * Title text for item.
 			 *
@@ -253,7 +269,7 @@ export declare namespace hain {
 		 * Both `primaryText` and `secondaryText` are used for user query matching.
 		 * `primaryText` has higher priority. `secondaryText` has lower priority.
 		 */
-		export interface IndexedResult extends BaseResult {
+		export interface IndexedResult extends hain_.BaseResult {
 			/**
 			 * Title text for item.
 			 *
@@ -286,7 +302,7 @@ export declare namespace hain {
 		 *
 		 * 	function search(query, res) { ... }
 		 *
-		 * 	function execute(id, payload) {
+		 * 	function execute(id, payload, extra) {
 		 * 		if (id === '1') {
 		 * 			toast.enqueue('This is message', 1500);
 		 * 		} else if (id == '2') {
@@ -359,7 +375,6 @@ export declare namespace hain {
 	export namespace PluginContext {
 
 		/**
-		 * @since v0.5
 		 */
 		export interface App {
 			/**
@@ -406,7 +421,6 @@ export declare namespace hain {
 			reloadPlugins(): void;
 
 			/**
-			 * ???
 			 */
 			setSelectionIndex(): void;
 		}
@@ -425,7 +439,7 @@ export declare namespace hain {
 		 * 	function startup() { ... }
 		 * 	function search(query, res) { ... }
 		 *
-		 * 	function execute(id, payload) {
+		 * 	function execute(id, payload, extra) {
 		 * 		clipboard.readText().then((result) => {
 		 * 			console.log('Text from clipboard: ' + result);
 		 * 		});
@@ -490,7 +504,6 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
 		 */
 		export interface Shell {
 			/**
@@ -516,11 +529,12 @@ export declare namespace hain {
 		}
 
 		/**
-		 * You can use this object instead of console.log.
+		 * Send log messages out to various endpoints.
 		 *
-		 * You can see logging messages in `Chrome Developer Tools` in the app. You can open
-		 * `Chrome Developer Tools` by pressing F12 in the app and you can also see these
-		 * logging messages in console (standard output) too.
+		 * Logging messages are sent to:
+		 *   - The `Chrome Developer Tools` in the app (F12 to open).
+		 *   - The hain-debug.log located along with hain.exe
+		 *   - Standard output if run from a command prompt.
 		 */
 		export interface Logger {
 			/**
@@ -533,7 +547,6 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
 		 */
 		export interface MatchUtil {
 			/**
@@ -577,7 +590,7 @@ export declare namespace hain {
 		 * 	}
 		 *
 		 * 	function search(query, res) { ... }
-		 * 	function execute(id, payload) { ... }
+		 * 	function execute(id, payload, extra) { ... }
 		 *
 		 * 	return { startup, search, execute };
 		 * };
@@ -603,12 +616,22 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
+		 * Use this to persist non-preference data for your plugin
+		 *
+		 * This object is an instance of [simonlast/node-persist](https://github.com/simonlast/node-persist)
+		 *
+		 * @note: The interface listed here should be up to date, but the github repository is the final implementation.
+		 *
+		 * ### Example
+		 * [[include:example-local-storage.md]]
 		 */
 		export interface PluginLocalStorage extends NodePersist.LocalStorage {
 
 		}
 		/**
+		 * Add items to the Indexer that are known ahead of time.  e.g. Shortcuts, urls, files, etc.
+		 *
+		 * These are added to the global list of [[IndexedResult]] items and are searched automatically by Hain.
 		 * @since v0.6
 		 */
 		export interface Indexer {

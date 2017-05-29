@@ -12,6 +12,7 @@ hain-plugin-something
 
 ## index.js
 
+<!-- [[include:example-basic.md]] -->
 ```javascript
 'use strict';
 
@@ -24,7 +25,7 @@ module.exports = (pluginContext) => {
 		// You can return your search results here
 	}
 
-	function execute(id, payload) {
+	function execute(id, payload, extra) {
 		// When your result is selected, you can run something here
 	}
 
@@ -36,7 +37,7 @@ module.exports = (pluginContext) => {
 };
 ```
 
-See [[hain.Plugin]] for detailed information.
+See [[Plugin]] for detailed information.
 
 ## Example Plugin
 
@@ -60,7 +61,7 @@ module.exports = (pluginContext) => {
 		});
 	}
 
-	function execute(id, payload) {
+	function execute(id, payload, extra) {
 		if (id === '1') {
 			toast.enqueue(`${payload} was entered`);
 		}
