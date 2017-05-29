@@ -15,10 +15,10 @@ You should use these tags carefully to avoid breaking layout.
 ## Example
 
 ```javascript
-	function search(query, res) {
-	  res.add({
-		title: '<b>Bold</b> text',
-		desc:  '<span style="color: blue">blue</span> text'
-	  });
-	}
+function search(query, res) {
+	res.add({
+		title:	'<b>Bold</b> text',
+		desc:	'<span style="color: blue">blue</span> text'
+	});
+}
 ```

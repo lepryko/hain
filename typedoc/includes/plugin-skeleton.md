@@ -1,6 +1,6 @@
 # Plugin Skeleton
 
-## Structure of Plugin Folder  
+## Structure of Plugin Folder
 
 ```
 hain-plugin-something
@@ -9,30 +9,30 @@ hain-plugin-something
 ├─ index.js          - script code (required)
 └─ ...
 ```
- 
+
 ## index.js
 
 ```javascript
 'use strict';
 
 module.exports = (pluginContext) => {
-  function startup() {
-    // You can do any initialization here
-  }
- 
-  function search(query, res) {
-    // You can return your search results here
-  }
+	function startup() {
+		// You can do any initialization here
+	}
 
-  function execute(id, payload) {
-    // When your result is selected, you can run something here
-  }
-  
-  function renderPreview(id, payload, render) {
-    // You can render preview with HTML
-  }
+	function search(query, res) {
+		// You can return your search results here
+	}
 
-  return { startup, search, execute, renderPreview };
+	function execute(id, payload) {
+		// When your result is selected, you can run something here
+	}
+
+	function renderPreview(id, payload, render) {
+		// You can render preview with HTML
+	}
+
+	return { startup, search, execute, renderPreview };
 };
 ```
 
@@ -44,32 +44,32 @@ See [[hain.Plugin]] for detailed information.
 'use strict';
 
 module.exports = (pluginContext) => {
-  const toast = pluginContext.toast;
-  const logger = pluginContext.logger;
+	const toast = pluginContext.toast;
+	const logger = pluginContext.logger;
 
-  function startup() {
-    logger.log('doing preparation');
-  }
+	function startup() {
+		logger.log('doing preparation');
+	}
 
-  function search(query, res) {
-    res.add({
-      id:      '1',
-      payload: query,
-      title:   `You entered ${query} now`,
-      desc:    `<b>${query}</b>`
-    });
-  }
+	function search(query, res) {
+		res.add({
+			id:			'1',
+			payload:	query,
+			title:		`You entered ${query} now`,
+			desc:		`<b>${query}</b>`
+		});
+	}
 
-  function execute(id, payload) {
-    if (id === '1') {
-      toast.enqueue(`${payload} was entered`);
-    }
-  }
-  
-  function renderPreview(id, payload, render) {
-    render('<html><body>Something</body></html>');
-  }
-  
-  return { startup, search, execute, renderPreview };
+	function execute(id, payload) {
+		if (id === '1') {
+			toast.enqueue(`${payload} was entered`);
+		}
+	}
+
+	function renderPreview(id, payload, render) {
+		render('<html><body>Something</body></html>');
+	}
+
+	return { startup, search, execute, renderPreview };
 };
 ```

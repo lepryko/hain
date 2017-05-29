@@ -71,12 +71,9 @@ export declare namespace hain {
 	export type bitfield = number;
 
 	/**
-	 * These are the functions your plugin can/must implement
-	 *
-	 * ## Markdown
-	 * This is rendered as markdown
+	 * These are the methods your plugin may implement
 	 */
-	export interface Plugin {
+	export class Plugin {
 
 		/**
 		 *  This function will be invoked once at startup.  Use promises and asynchronous calls to avoid long load times.
@@ -90,12 +87,12 @@ export declare namespace hain {
 		 * @param res    The results of the query should be added to this object
 		 *
 		 * @since v0.6   `search()` is only called when the query begins with your
-		 * 					[package.json](http://hainproject.github.io/hain/docs/preferences-json-format/) prefix value
+		 * 					[package.json](../modules/guides.preferences_json_format.html) prefix value
 		 */
 		search(query: string, res: Plugin.ResponseObject): void;
 
 		/**
-		 * This function will be invoked when user executes a [[Result]] you send in the search function.
+		 * This function will be invoked when user executes an item you send in the search function.
 		 *
 		 * @param id       `id` of the selected [[SearchResult]] or [[IndexedResult]]
 		 * @param payload  `payload` of the selected [[SearchResult]] or [[IndexedResult]]
@@ -115,9 +112,8 @@ export declare namespace hain {
 
 	export namespace Plugin {
 
-		export type Result = IndexedResult | SearchResult;
 		/**
-		 * You can use this interface for adding or removing [[Result]] entries.  This interface
+		 * You can use this interface for adding or removing [[SearchResult]] entries.  This interface
 		 *  is always provided as the second argument to Plugin.search().
 		 *
 		 * ### Example
@@ -209,8 +205,8 @@ export declare namespace hain {
 			payload?: any;
 
 			/**
-			 * Icon URL, default is `icon` of <a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a>.
-			 * @see <a href="http://hainproject.github.io/hain/docs/icon-url-format/">Icon URL Format</a>
+			 * Icon URL, default is `icon` of [package.json](../modules/guides.preferences_json_format.html).
+			 * See [Icon URL Format](../modules/guides.icon_url_format.html)
 			 */
 			icon?: string;
 
@@ -220,8 +216,7 @@ export declare namespace hain {
 			redirect?: string;
 
 			/**
-			 * Result grouping name, default is `group` of
-			 *        <a href="http://hainproject.github.io/hain/docs/preferences-json-format/">package.json</a>
+			 * Result grouping name, default is `group` of [package.json](../modules/guides.preferences_json_format.html)
 			 **/
 			group?: string;
 
@@ -238,48 +233,74 @@ export declare namespace hain {
 			/**
 			 * Title text for item.
 			 *
-			 * @see <a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a>
+			 * See [Text Format](../modules/guides.text_format.html)
 			 */
 			title: string;
 
 			/**
 			 * Description text for item.
 			 *
-			 * @see <a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a>
+			 * See [Text Format](../modules/guides.text_format.html)
 			 */
 			desc: string;
 		}
 
 		/**
 		 * IndexedResult is used as a return value for [[Indexer]]
+		 *
+		 * [[Indexer]] is used for synchronous searching items.
+		 *
+		 * Both `primaryText` and `secondaryText` are used for user query matching.
+		 * `primaryText` has higher priority. `secondaryText` has lower priority.
 		 */
 		export interface IndexedResult extends BaseResult {
 			/**
 			 * Title text for item.
 			 *
-			 * @see <a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a>
+			 * See [Text Format](../modules/guides.text_format.html)
 			 */
 			primaryText: string;
 
 			/**
 			 * Description text for item.
 			 *
-			 * @see <a href="http://hainproject.github.io/hain/docs/text-format/">Text Format</a>
+			 * See [Text Format](../modules/guides.text_format.html)
 			 */
 			secondaryText: string;
 		}
 	}
 
-	/**
-	 * ## Markdown
-	 * This is rendered as markdown
-	 */
-	export namespace PluginContext {
 		/**
-		 * The main pluginContext parameter your plugin is initialized with
-		 * @since v0.5
-		 */
-		export interface PluginContext {
+		 * The main pluginContext parameter your plugin is passed when loaded
+		 *
+		 * ### Example
+		 * ```
+		 * 'use strict';
+		 *
+		 * module.exports = (pluginContext) => {
+		 * 	const app = pluginContext.app;
+		 * 	const toast = pluginContext.toast;
+		 * 	const logger = pluginContext.logger;
+		 *
+		 * 	function startup() { ... }
+		 *
+		 * 	function search(query, res) { ... }
+		 *
+		 * 	function execute(id, payload) {
+		 * 		if (id === '1') {
+		 * 			toast.enqueue('This is message', 1500);
+		 * 		} else if (id == '2') {
+		 * 			app.close();
+		 * 		} else if (id == '3') {
+		 * 			logger.log('this is log');
+		 * 		}
+		 * 	}
+		 *
+		 * 	return { startup, search, execute };
+		 * };
+		 * ```
+		 **/
+		export class PluginContext {
 			/** Directory of hain managed plugins */
 			MAIN_PLUGIN_REPO: string;
 
@@ -292,45 +313,62 @@ export declare namespace hain {
 			/** Array of API versions that are still compatible with current version */
 			COMPATIBLE_API_VERSIONS: string[];
 
+			INTERNAL_PLUGIN_REPO: string;
+
+			__PLUGIN_PREINSTALL_DIR: string;
+
+			__PLUGIN_PREUNINSTALL_FILE: string;
+
+
 			/** Access to application functions */
-			app: App;
+			app: PluginContext.App;
 
 			/** Access to clipboard functions */
-			clipboard: Clipboard;
+			clipboard: PluginContext.Clipboard;
 
 			/** Access to toast functionality */
-			toast: Toaster;
+			toast: PluginContext.Toaster;
 
 			/** Access to shell functionality */
-			shell: Shell;
+			shell: PluginContext.Shell;
 
 			/** Access to logging functionality */
-			logger: Logger;
+			logger: PluginContext.Logger;
 
-			/** Access to matching utility functions */
-			matchUtil: MatchUtil;
-
-			/** Access to hain global preferences */
-			globalPreferences: Preferences;
+			/**
+			 * Access to matching utility functions
+			 * @deprecated
+			 **/
+			matchUtil: PluginContext.MatchUtil;
 
 			/** Access to plugin local storage */
-			localStorage: PluginLocalStorage;
+			localStorage: PluginContext.PluginLocalStorage;
 
 			/** Access to hain plugin indexer */
-			indexer: Indexer;
+			indexer: PluginContext.Indexer;
+
+			/** Access to hain global preferences */
+			globalPreferences: PluginContext.Preferences;
+
+			/** Access to plugin preferences */
+			preferences: PluginContext.Preferences;
 		}
+
+	/**
+	 */
+	export namespace PluginContext {
 
 		/**
 		 * @since v0.5
 		 */
 		export interface App {
 			/**
-			 * Restarts hain
+			 * Restarts Hain
 			 */
 			restart(): void;
 
 			/**
-			 * Quits hain
+			 * Quits Hain
 			 */
 			quit(): void;
 
@@ -344,7 +382,7 @@ export declare namespace hain {
 			/**
 			 * Close the window
 			 *
-			 * @param dontRestoreFocus - If true, Hain doesn’t restore focus to previous window (default is false)
+			 * @param dontRestoreFocus - If true, Hain doesn’t restore focus to previous window
 			 */
 			close(dontRestoreFocus?: boolean): void;
 
@@ -374,8 +412,28 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
-		 * @see http://electron.atom.io/docs/api/clipboard/
+		 * See [Electron Documentation](http://electron.atom.io/docs/api/clipboard/) for clipboard for details
+		 *
+		 * ### Example
+		 *
+		 * ```
+		 * 'use strict'
+		 *
+		 * module.exports = (pluginContext) => {
+		 * 	const clipboard = pluginContext.clipboard;
+		 *
+		 * 	function startup() { ... }
+		 * 	function search(query, res) { ... }
+		 *
+		 * 	function execute(id, payload) {
+		 * 		clipboard.readText().then((result) => {
+		 * 			console.log('Text from clipboard: ' + result);
+		 * 		});
+		 * 	}
+		 *
+		 * 	return { startup, search, execute };
+		 * };
+		 * ```
 		 */
 		export interface Clipboard {
 			/**
@@ -417,8 +475,6 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
-		 *
 		 * You can show notifications to user by using Toast.
 		 *
 		 * @note Enqueued notifications are processed in order and will not be processed while the window isn’t visible.
@@ -460,11 +516,15 @@ export declare namespace hain {
 		}
 
 		/**
-		 * @since v0.5
+		 * You can use this object instead of console.log.
+		 *
+		 * You can see logging messages in `Chrome Developer Tools` in the app. You can open
+		 * `Chrome Developer Tools` by pressing F12 in the app and you can also see these
+		 * logging messages in console (standard output) too.
 		 */
 		export interface Logger {
 			/**
-			 * Logs your messages to the console.
+			 * Logs your messages to stdout as well as the `Chrome Developer Tools` console.
 			 *
 			 * @param message    The message to be shown (compatible with [Chrome console.log](https://developers.google.com/web/tools/chrome-devtools/console/console-reference#log))
 			 * @param args       Additional arguments to be shown
@@ -475,30 +535,53 @@ export declare namespace hain {
 		/**
 		 * @since v0.5
 		 */
-		interface MatchUtil {
+		export interface MatchUtil {
 			/**
-			 *
+			 * @deprecated
 			 */
 			fuzzy(): void;
 
 			/**
-			 *
+			 * @deprecated
 			 */
 			fwdfuzzy(): void;
 
 			/**
-			 *
+			 * @deprecated
 			 */
 			head(): void;
 
 			/**
-			 *
+			 * @deprecated
 			 */
 			makeStringBoldHtml(): void;
 		}
 
 		/**
-		 * @since v0.5
+		 * ### Example
+		 *
+		 * ```
+		 * 'use strict'
+		 *
+		 * module.exports = (pluginContext) => {
+		 * 	const prefObj = pluginContext.preferences;
+		 * 	let useProxy = false;
+		 *
+		 * 	function onPrefUpdate(pref) {
+		 * 		useProxy = pref.useProxy;
+		 * 	}
+		 *
+		 * 	function startup() {
+		 * 		useProxy = prefObj.get('useProxy');
+		 * 		prefObj.on('update', onPrefUpdate);
+		 * 	}
+		 *
+		 * 	function search(query, res) { ... }
+		 * 	function execute(id, payload) { ... }
+		 *
+		 * 	return { startup, search, execute };
+		 * };
+		 * ```
 		 */
 		export interface Preferences {
 			/**
@@ -512,7 +595,9 @@ export declare namespace hain {
 			 * Add a listener to PreferencesObject.
 			 *
 			 * @param eventName    The `update` event is emitted when plugin preferences have changed
-			 * @param listener    The call back to be used.
+			 * @param listener     The call back to be used.
+			 *
+			 * @note: Currently, `update` is the only supported event; it will be emitted when the preference has changed.
 			 */
 			on(eventName: string, listener: (pref: string) => void): void;
 		}
@@ -548,7 +633,7 @@ export declare namespace hain {
 			 *
 			 * @param key       A unique ID which you can later use to remove or modify this addition
 			 */
-			remove(key: string): void;
+			unset(key: string): void;
 		}
 	}
 }

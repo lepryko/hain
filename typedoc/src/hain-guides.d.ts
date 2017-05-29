@@ -1,4 +1,6 @@
 /**
+ * [[include:plugins-on-github.md]]
+ *
  * @td:Type Guide
  * @td:Title Guides
  */
