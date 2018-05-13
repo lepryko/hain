@@ -11,7 +11,6 @@ const zip = require('gulp-zip');
 const electronInstaller = require('electron-winstaller');
 const fs = require('fs');
 const del = require('del');
-const replace = require('gulp-replace');
 const appPkg = require('./app/package.json');
 
 gulp.task('deps', () => {
@@ -158,14 +157,7 @@ gulp.task('build-installer', ['build', 'build-zip'], () => {
   return buildInstaller('ia32').then(() => buildInstaller('x64'));
 });
 
-gulp.task('build-chocolatey', () => {
-  return gulp
-    .src('./chocolatey/**/*')
-    .pipe(replace('${version}', appPkg.version))
-    .pipe(gulp.dest('./out/chocolatey/'));
-});
-
-gulp.task('build-all', ['build-zip', 'build-installer', 'build-chocolatey']);
+gulp.task('build-all', ['build-zip', 'build-installer']);
 
 gulp.task('watch', ['renderer'], () => {
   const opts = {
