@@ -33,7 +33,7 @@
     "got": "^6.2.0",
     "html-escape": "^1.0.2",
     "jquery": "^3.3.1",
-    "jsonschema": "^1.1.0",
+    "jsonschema": "^1.4.0",
     "lodash.assign": "^4.0.7",
     "lodash.clamp": "^4.0.2",
     "lodash.clonedeep": "^4.3.2",
