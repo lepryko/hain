@@ -28,7 +28,7 @@
     "co": "^4.6.0",
     "electron-squirrel-startup": "^1.0.0",
     "file-type": "^8.0.0",
-    "fs-extra": "^0.26.5",
+    "fs-extra": "^0.30.0",
     "fs-promise": "1.0.0",
     "got": "^6.2.0",
     "html-escape": "^1.0.2",
