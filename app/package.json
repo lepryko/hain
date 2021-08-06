@@ -73,7 +73,7 @@
     "sanitize-html": "^1.11.3",
     "semver": "^5.1.0",
     "simple-lru-cache": "0.0.2",
-    "tar": "2.2.1",
+    "tar": "6.1.4",
     "tarball-extract": "0.0.3",
     "tinycolor2": "^1.4.1",
     "tunnel": "0.0.4",
