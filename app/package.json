@@ -27,7 +27,7 @@
     "application-config-path": "^0.1.0",
     "co": "^4.6.0",
     "electron-squirrel-startup": "^1.0.0",
-    "file-type": "^8.0.0",
+    "file-type": "^16.5.4",
     "fs-extra": "^0.26.5",
     "fs-promise": "1.0.0",
     "got": "^6.2.0",
