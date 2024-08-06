@@ -56,8 +56,8 @@ module.exports = (context) => {
         );
       }
 
-      // calculate value by passing the query into MathJS
-      const ans = math.eval(query);
+      // calculate value using the MathJS library
+      const ans = math.evaluate(query);
 
       if (
         lo_isNumber(ans) ||
