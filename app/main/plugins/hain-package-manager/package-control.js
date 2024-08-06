@@ -82,7 +82,7 @@ function* downloadAndExtractPackage(
   const distUrl = data.dist.tarball;
 
   const filename = distUrl.split('/').pop();
-  const downloadPath = path.join(tempDir, filename);
+  const downloadPath = path.join(tempDir, path.normalize(filename));
   const tempPackageDir = path.join(tempDir, 'package');
 
   yield downloadFile(distUrl, downloadPath);
