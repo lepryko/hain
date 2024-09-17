@@ -32,7 +32,7 @@
     "fs-promise": "1.0.0",
     "got": "^6.2.0",
     "html-escape": "^1.0.2",
-    "jquery": "^3.6.0",
+    "jquery": "^3.7.1",
     "jsonschema": "^1.4.0",
     "lodash.assign": "^4.0.7",
     "lodash.clamp": "^4.0.2",
