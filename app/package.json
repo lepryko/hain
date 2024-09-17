@@ -71,7 +71,7 @@
     "react-notification": "6.8.5",
     "react-tap-event-plugin": "^0.2.2",
     "sanitize-html": "^1.11.3",
-    "semver": "^5.1.0",
+    "semver": "^7.5.2",
     "simple-lru-cache": "0.0.2",
     "tar": "3.2.3",
     "tarball-extract": "0.0.3",
