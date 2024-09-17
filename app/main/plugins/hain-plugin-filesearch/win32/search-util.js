@@ -4,7 +4,7 @@ const path = require('path');
 
 function fileToIndexerElement(filePath) {
   const basenameWithoutExt = path.basename(filePath, path.extname(filePath));
-  const path_b64 = new Buffer(filePath).toString('base64');
+  const path_b64 = Buffer.from(filePath).toString('base64');
   return {
     id: filePath,
     primaryText: basenameWithoutExt,
