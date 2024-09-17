@@ -122,11 +122,13 @@ class Packman {
   }
 
   uninstallPackageForUpdate(packageName) {
-    this._uninstallPackage(this.updateListFile, packageName);
+    const normalizedFilePath = path.normalize(this.updateListFile);
+    this._uninstallPackage(normalizedFilePath, packageName);
   }
 
   uninstallPackage(packageName) {
-    this._uninstallPackage(this.uninstallListFile, packageName);
+    const normalizedFilePath = path.normalize(this.uninstallListFile);
+    this._uninstallPackage(normalizedFilePath, packageName);
   }
 }
 
