@@ -46,13 +46,13 @@ class ThemeService {
     const _this = this;
 
     fs.readdirSync(conf.THEME_REPO).forEach((fileName) => {
-      const filePath = path.join(conf.THEME_REPO, fileName);
+      const filePath = path.normalize(path.join(conf.THEME_REPO, fileName));
       let themeObj = {};
-
+    
       try {
         // read the file contents
         let fileContents = fs.readFileSync(filePath, 'utf8');
-
+    
         try {
           // detect if this is an incompatible Themer "export" type file - if so, rewrite it into something that we can import
           if (
@@ -63,17 +63,17 @@ class ThemeService {
               /export(\s)+(?:const?(.*))?colors(\s)*=(\s)*{/g,
               'exports.colors = {'
             );
-
+    
             // write changed file contents back to the file
             try {
               fs.writeFileSync(filePath, fileContents, 'utf8');
             } catch (err) {
               console.log('[theme-service] Themer rewrite error');
-
+    
               return;
             }
           }
-
+    
           // detect type of JSON color scheme file...
           if (fileContents.match(/exports\.colors(\s)*=(\s)*{/g)) {
             // this is a compatible Themer export file
@@ -81,10 +81,10 @@ class ThemeService {
               themeObj = require(filePath).colors;
             } catch (err) {
               console.log('[theme-service] Themer import error');
-
+    
               return;
             }
-
+    
             // Themer files can contain "light", "dark", or both color schemes - ensure we have at least one of them
             if (
               typeof themeObj.light !== 'object' &&
@@ -93,10 +93,10 @@ class ThemeService {
               console.log(
                 `[theme-service] could not find a valid light or dark theme in ${filePath}`
               );
-
+    
               return;
             }
-
+    
             // Themer files can contain "light", "dark", or both color schemes - detect and parse them
             if (typeof themeObj.light === 'object') {
               _this._storeItem(
@@ -113,7 +113,7 @@ class ThemeService {
             _this._storeItem(
               new ThemeObjectAlfredJSON(JSON.parse(fileContents), fileName)
             );
-
+    
             return;
           }
         } catch (err) {
@@ -122,19 +122,19 @@ class ThemeService {
             _this._storeItem(
               new ThemeObjectAlfredXML(plist.parse(fileContents), fileName)
             );
-
+    
             return;
           } catch (err) {
             console.log(
               `[theme-service] could not parse ${filePath} file as a supported color scheme format (Alfred JSON, Alfred XML, Themer exports file`
             );
-
+    
             return;
           }
         }
       } catch (err) {
         console.log(`[theme-service] could not read ${filePath} file`);
-
+    
         return;
       }
     });
