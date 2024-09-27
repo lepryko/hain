@@ -80,6 +80,6 @@
     "twitter-text": "^1.13.4",
     "uuid": "2.0.2",
     "winreg": "1.2.2",
-    "winston": "^3.3.0"
+    "winston": "^3.14.2"
   }
 }
